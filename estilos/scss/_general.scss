@@ -1,0 +1,326 @@
+@font-face {
+    font-family: "Rubik";
+    src: url("../fuentes/Rubik-VariableFont_wght.ttf");
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik";
+
+    &::selection {
+        background: #00000020;
+    }
+
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: #f5f5f5;
+}
+
+header {
+    width: 100%;
+    border-bottom: 1px solid #00000020;
+    text-transform: uppercase;
+    background: #fff;
+    height: 70px;
+
+    .headerCenter {
+        width: 1300px;
+        margin: auto;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        /*.logo {
+
+        }*/
+
+        .headerNav {
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            .actual {
+                color: $colorPrincipal1;
+            }
+
+            nav {
+                display: flex;
+                align-items: center;
+
+                ul {
+                    display: flex;
+                    align-items: center;
+
+                    li {
+                        display: block;
+                        height: 29px;
+
+                        a {
+
+                            display: block;
+                            text-align: center;
+                            margin: 0 10px;
+                            color: $letrasOscuras;
+                            padding: 5px;
+                            border-radius: 5px;
+
+                            &:hover {
+                                background: #00000010;
+                                fill: $colorPrincipal1;
+                                color: $colorPrincipal1;
+
+                                i,
+                                svg {
+                                    fill: $colorPrincipal1;
+                                    color: $colorPrincipal1;
+                                }
+                            }
+                        }
+
+
+                    }
+                }
+
+                .opcionesNav {
+
+                    li,
+                    a {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 29px;
+                        position: relative;
+                        margin: 0 3px;
+                        color: $letrasOscuras;
+
+                        span {
+                            position: absolute;
+                            top: 35px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            display: none;
+                            font-size: 14px;
+                        }
+
+                        &:hover {
+                            span {
+                                display: block;
+                                color: $letrasBlancas;
+                                background: #00000060;
+                                border-radius: 5px;
+                                padding: 3px 5px;
+                            }
+                        }
+
+                    }
+
+                    #lupa {
+                        cursor: pointer;
+
+                        i {
+                            -webkit-text-stroke: .5px #fff;
+                            font-size: 18px;
+                        }
+
+
+                        &:hover {
+                            background: #00000010;
+                            border-radius: 5px;
+
+                            i {
+                                color: $colorPrincipal1;
+                            }
+                        }
+                    }
+
+                    #carrito {
+                        span {
+                            transform: translateX(-50%);
+                        }
+
+                        svg {
+                            transform: translateY(-1px) rotateY(180deg);
+                        }
+                    }
+
+                    #usuario {
+                        display: none;
+                        cursor: pointer;
+                        font-size: 18px;
+
+                        &:hover {
+                            background: #00000010;
+                            border-radius: 5px;
+
+                            i {
+                                color: $colorPrincipal1;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .opcionesCuenta {
+                margin-left: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+
+                div {
+                    margin: 0 5px;
+
+                    a {
+                        display: block;
+                        color: $colorPrincipal1;
+                        padding: 5px 10px;
+                        border-radius: 5px;
+
+                        &:hover {
+                            background: #00000010;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        background: $colorPrincipal1;
+                        border-radius: 5px;
+                        border: 1px solid $colorPrincipal1;
+
+                        a {
+                            color: $letrasBlancas;
+
+
+                        }
+
+                        &:hover {
+                            background: transparent;
+
+                            a {
+                                color: $colorPrincipal1;
+                                background: transparent;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+}
+
+section {
+    height: 600px;
+}
+
+footer {
+    width: 100%;
+    padding: 20px 0;
+    background: $colorPrincipal2;
+
+    .footerCenter {
+        width: 1300px;
+        margin: auto;
+
+
+        .infoFooter {
+            display: inline-block;
+            width: 80%;
+            text-align: center;
+            margin: 30px 10%;
+            color: $letrasClaras;
+            font-size: 15px;
+
+        }
+
+        .redirecciones {
+            margin: 30px 0 ;
+            display: flex;
+            justify-content: space-evenly;
+
+            h3 {
+                display: inline-block;
+                color: $letrasClaras;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+                border-bottom: .5px solid #3d3d3d;
+                font-weight: 400;
+                font-size: 18px;
+                text-transform: uppercase;
+            }
+
+            .logoFooter {
+                outline: auto;
+                height: 50px;
+                width: 200px;
+                margin: 20px 0;
+            }
+
+
+            .redireccionesCategorias, .redireccionesAyuda {
+                li {
+                    margin: 5px 0;
+
+                    a {
+                        color: #aaa;
+
+                        &:hover{
+                            color: $letrasBlancas;
+                        }
+                    }
+                }
+            }
+            .redireccionesRedes {
+            
+                ul {
+                    display: flex;
+    
+                    li {
+                        margin: 0 5px;
+    
+                        a {
+                            display: flex;
+                            height: 35px;
+                            width: 35px;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 50%;
+                            border: 1px solid #aaa;
+    
+                            i {
+                                color: #aaa;
+                                font-size: 18px;
+
+                            }
+    
+                            &:hover {
+                                background: $letrasBlancas;
+                                border: 1px solid $letrasBlancas;
+    
+                                i {
+                                    color: $colorPrincipal2;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+
+    }
+}

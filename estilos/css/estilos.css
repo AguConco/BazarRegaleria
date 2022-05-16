@@ -1,0 +1,201 @@
+@font-face {
+  font-family: "Rubik";
+  src: url("../fuentes/Rubik-VariableFont_wght.ttf"); }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik"; }
+  *::selection {
+    background: #00000020; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+body {
+  background: #f5f5f5; }
+
+header {
+  width: 100%;
+  border-bottom: 1px solid #00000020;
+  text-transform: uppercase;
+  background: #fff;
+  height: 70px; }
+  header .headerCenter {
+    width: 1300px;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*.logo {
+
+        }*/ }
+    header .headerCenter .headerNav {
+      height: 100%;
+      display: flex;
+      align-items: center; }
+      header .headerCenter .headerNav .actual {
+        color: #d66140; }
+      header .headerCenter .headerNav nav {
+        display: flex;
+        align-items: center; }
+        header .headerCenter .headerNav nav ul {
+          display: flex;
+          align-items: center; }
+          header .headerCenter .headerNav nav ul li {
+            display: block;
+            height: 29px; }
+            header .headerCenter .headerNav nav ul li a {
+              display: block;
+              text-align: center;
+              margin: 0 10px;
+              color: #575758;
+              padding: 5px;
+              border-radius: 5px; }
+              header .headerCenter .headerNav nav ul li a:hover {
+                background: #00000010;
+                fill: #d66140;
+                color: #d66140; }
+                header .headerCenter .headerNav nav ul li a:hover i,
+                header .headerCenter .headerNav nav ul li a:hover svg {
+                  fill: #d66140;
+                  color: #d66140; }
+        header .headerCenter .headerNav nav .opcionesNav li,
+        header .headerCenter .headerNav nav .opcionesNav a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 29px;
+          position: relative;
+          margin: 0 3px;
+          color: #575758; }
+          header .headerCenter .headerNav nav .opcionesNav li span,
+          header .headerCenter .headerNav nav .opcionesNav a span {
+            position: absolute;
+            top: 35px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: none;
+            font-size: 14px; }
+          header .headerCenter .headerNav nav .opcionesNav li:hover span,
+          header .headerCenter .headerNav nav .opcionesNav a:hover span {
+            display: block;
+            color: #ffffff;
+            background: #00000060;
+            border-radius: 5px;
+            padding: 3px 5px; }
+        header .headerCenter .headerNav nav .opcionesNav #lupa {
+          cursor: pointer; }
+          header .headerCenter .headerNav nav .opcionesNav #lupa i {
+            -webkit-text-stroke: .5px #fff;
+            font-size: 18px; }
+          header .headerCenter .headerNav nav .opcionesNav #lupa:hover {
+            background: #00000010;
+            border-radius: 5px; }
+            header .headerCenter .headerNav nav .opcionesNav #lupa:hover i {
+              color: #d66140; }
+        header .headerCenter .headerNav nav .opcionesNav #carrito span {
+          transform: translateX(-50%); }
+        header .headerCenter .headerNav nav .opcionesNav #carrito svg {
+          transform: translateY(-1px) rotateY(180deg); }
+        header .headerCenter .headerNav nav .opcionesNav #usuario {
+          display: none;
+          cursor: pointer;
+          font-size: 18px; }
+          header .headerCenter .headerNav nav .opcionesNav #usuario:hover {
+            background: #00000010;
+            border-radius: 5px; }
+            header .headerCenter .headerNav nav .opcionesNav #usuario:hover i {
+              color: #d66140; }
+      header .headerCenter .headerNav .opcionesCuenta {
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: end; }
+        header .headerCenter .headerNav .opcionesCuenta div {
+          margin: 0 5px; }
+          header .headerCenter .headerNav .opcionesCuenta div a {
+            display: block;
+            color: #d66140;
+            padding: 5px 10px;
+            border-radius: 5px; }
+            header .headerCenter .headerNav .opcionesCuenta div a:hover {
+              background: #00000010; }
+          header .headerCenter .headerNav .opcionesCuenta div:nth-child(2) {
+            background: #d66140;
+            border-radius: 5px;
+            border: 1px solid #d66140; }
+            header .headerCenter .headerNav .opcionesCuenta div:nth-child(2) a {
+              color: #ffffff; }
+            header .headerCenter .headerNav .opcionesCuenta div:nth-child(2):hover {
+              background: transparent; }
+              header .headerCenter .headerNav .opcionesCuenta div:nth-child(2):hover a {
+                color: #d66140;
+                background: transparent; }
+
+section {
+  height: 600px; }
+
+footer {
+  width: 100%;
+  padding: 20px 0;
+  background: #22222c; }
+  footer .footerCenter {
+    width: 1300px;
+    margin: auto; }
+    footer .footerCenter .infoFooter {
+      display: inline-block;
+      width: 80%;
+      text-align: center;
+      margin: 30px 10%;
+      color: #cecece;
+      font-size: 15px; }
+    footer .footerCenter .redirecciones {
+      margin: 30px 0;
+      display: flex;
+      justify-content: space-evenly; }
+      footer .footerCenter .redirecciones h3 {
+        display: inline-block;
+        color: #cecece;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: .5px solid #3d3d3d;
+        font-weight: 400;
+        font-size: 18px;
+        text-transform: uppercase; }
+      footer .footerCenter .redirecciones .logoFooter {
+        outline: auto;
+        height: 50px;
+        width: 200px;
+        margin: 20px 0; }
+      footer .footerCenter .redirecciones .redireccionesCategorias li, footer .footerCenter .redirecciones .redireccionesAyuda li {
+        margin: 5px 0; }
+        footer .footerCenter .redirecciones .redireccionesCategorias li a, footer .footerCenter .redirecciones .redireccionesAyuda li a {
+          color: #aaa; }
+          footer .footerCenter .redirecciones .redireccionesCategorias li a:hover, footer .footerCenter .redirecciones .redireccionesAyuda li a:hover {
+            color: #ffffff; }
+      footer .footerCenter .redirecciones .redireccionesRedes ul {
+        display: flex; }
+        footer .footerCenter .redirecciones .redireccionesRedes ul li {
+          margin: 0 5px; }
+          footer .footerCenter .redirecciones .redireccionesRedes ul li a {
+            display: flex;
+            height: 35px;
+            width: 35px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border: 1px solid #aaa; }
+            footer .footerCenter .redirecciones .redireccionesRedes ul li a i {
+              color: #aaa;
+              font-size: 18px; }
+            footer .footerCenter .redirecciones .redireccionesRedes ul li a:hover {
+              background: #ffffff;
+              border: 1px solid #ffffff; }
+              footer .footerCenter .redirecciones .redireccionesRedes ul li a:hover i {
+                color: #22222c; }
