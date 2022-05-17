@@ -1,4 +1,4 @@
-
+/* Variables */
 
 $colorPrincipal1: #d66140;
 $colorPrincipal2: #22222c;
@@ -6,3 +6,90 @@ $letrasOscuras:#575758;
 $letrasClaras: #cecece;
 $letrasBlancas:#ffffff;
 
+
+/* Extend */
+
+.btnPresentacion{
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: $colorPrincipal1;
+    color: $letrasBlancas;
+    border: 1px solid $colorPrincipal1; 
+    position: absolute;
+
+
+    &:hover{
+        color: $colorPrincipal1;
+        background: $letrasBlancas;
+    
+    }
+}
+
+.spanPresentacion{
+    font-weight: 400;
+    color: $letrasOscuras;
+    display: block;
+}
+
+.tarjetasCategorias{
+    .categoriaGridInfo{
+        height: 100%;
+
+        h2{
+            font-size: 24px;
+        }
+                        
+        .contenedorSpan{
+            margin-top: 15px;
+
+            .spanNum{
+                font-size: 25px;
+                display: inline-block;
+                @extend .spanPresentacion;
+            }
+            .spanProduct{
+                font-size: 20px;
+                display: inline-block;
+                @extend .spanPresentacion;
+            }
+        }
+
+        a{
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            @extend .btnPresentacion;
+        }
+
+    }
+}
+/*
+.categoriaGridInfo{
+    height: 100%;
+
+    h2{
+        font-size: 24px;
+    }
+                    
+    .contenedorSpan{
+        margin-top: 15px;
+        border-radius: 5px;
+
+        .spanNum{
+            font-size: 35px;
+            @extend .spanPresentacion;
+        }
+        .spanProduct{
+            font-size: 30px;
+            @extend .spanPresentacion;
+        }
+    }
+
+    a{
+        bottom: 30px;
+        left: 30px;
+        font-size: 18px;
+        @extend .btnPresentacion;
+    }
+
+}*/

@@ -54,8 +54,75 @@
             </div>
         </div>
     </header>
-    <section>
-
+    <section class="presentacion">
+        <h1>Gran variedad en productos de</h1>
+        <div class="presentacionGrid">
+            <div class="categoriasGrid g1">
+                <div class="categoriaGridInfo">
+                    <h2>Cocina
+                        <div></div>
+                    </h2>
+                    <div class="contenedorSpan">
+                        <span class="spanNum">0</span>
+                        <span class="spanProduct">Productos</span>
+                    </div>
+                    <a href="#">Ver más</a>
+                </div>
+                <img src="./multimedia/img/A130442.png" alt="">
+            </div>
+            <div class="categoriasGrid g2">
+                <div class="categoriaGridInfo">
+                    <h2>Mates y termos
+                        <div></div>
+                    </h2>
+                    <div class="contenedorSpan">
+                        <span class="spanNum">0</span>
+                        <span class="spanProduct">Productos</span>
+                    </div>
+                    <a href="#">Ver más</a>
+                </div>
+                <img src="./multimedia/img/termoMate.png" alt="">
+            </div>
+            <div class="categoriasGrid g3">
+                <div class="categoriaGridInfo">
+                    <h2>Regalería
+                        <div></div>
+                    </h2>
+                    <div class="contenedorSpan">
+                        <span class="spanNum">0</span>
+                        <span class="spanProduct">Productos</span>
+                    </div>
+                    <a href="#">Ver más</a>
+                </div>
+                <img src="./multimedia/img/Garden-pie-de-sitio-1556x1706.png" alt="">
+            </div>
+            <div class="categoriasGrid g4">
+                <div class="categoriaGridInfo">
+                    <h2>Limpieza y baño
+                        <div></div>
+                    </h2>
+                    <div class="contenedorSpan">
+                        <span class="spanNum">0</span>
+                        <span class="spanProduct">Productos</span>
+                    </div>
+                    <a href="#">Ver más</a>
+                </div>
+                <img src="./multimedia/img/limpieza.png" alt="">
+            </div>
+            <div class="categoriasGrid g5">
+                <div class="categoriaGridInfo">
+                    <h2>Juguetería
+                        <div></div>
+                    </h2>
+                    <div class="contenedorSpan">
+                        <span class="spanNum">0</span>
+                        <span class="spanProduct">Productos</span>
+                    </div>
+                    <a href="#">Ver más</a>
+                </div>
+                <img src="./multimedia/img/juguetes.png" alt="">
+            </div>
+        </div>
     </section>
     <footer>
         
@@ -102,5 +169,25 @@
             </div>  
         </div>
     </footer>
+
+    <script>
+        let numeros = document.querySelectorAll('.spanNum');
+        let i = 0;
+
+        for(let l = 0; l < numeros.length; l++){
+            setInterval(()=>{
+            i++;
+
+            if(i <= 187){
+                
+                numeros[l].innerHTML = i;
+            }
+        },.5)                 
+
+        }
+
+
+
+    </script>
 </body>
 </html>

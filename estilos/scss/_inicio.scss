@@ -1,0 +1,123 @@
+
+.presentacion{
+    width: 1300px;
+    margin: 0 auto 60px;
+
+    h1{
+        text-transform: uppercase;
+        text-align: center;
+        margin: 40px 0;
+        color: $letrasOscuras;
+    }
+
+    .presentacionGrid{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2,200px);
+        grid-template-areas:"cocina mate regaleria"
+                            "baño   mate juguete";
+
+        .categoriasGrid{
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px #00000020;
+            background: #fff;
+            padding: 30px;
+
+            h2{
+                position: relative;
+                color: $colorPrincipal2;
+                display: inline-block;                
+                text-transform: uppercase;
+                font-weight: 900;
+
+                div{
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    height: 2px;
+                    width: 50px;
+                    background: $colorPrincipal1;
+                }
+            }
+
+            img{
+                position: absolute;
+                pointer-events: none;
+            }
+
+            &:hover{
+                transform: scale(1.01);
+
+            }
+        }
+
+        .g1{
+            grid-area: cocina;
+            @extend .tarjetasCategorias;
+
+            img{
+                top: 35px;
+                right: -10px;
+            }
+        }
+        .g2{
+            grid-area: mate;
+
+            @extend .tarjetasCategorias;
+            .categoriaGridInfo{
+
+                .contenedorSpan{
+                    .spanNum{
+                        font-size: 35px;
+                        display: block;
+                    }
+                    .spanProduct{
+                        font-size: 30px;
+                    }
+                }
+            }
+
+            a{
+                font-size: 20px;
+            }
+
+            img{
+                transform: rotateY(180deg);
+                top: 10px;
+                right: -20px;
+            }
+
+        }
+        .g3{
+            grid-area: regaleria;
+            @extend .tarjetasCategorias;
+            
+            img{
+                top: 10px;
+                right: 15px;
+            }
+        }
+        .g4{
+            grid-area: baño;
+            @extend .tarjetasCategorias;
+            
+            img{
+                top: 40px;
+                right: 10px;
+            }
+        }
+        .g5{
+            grid-area: juguete;
+            @extend .tarjetasCategorias;
+            
+            img{
+                top: 5px;
+                right: -25px;
+            }
+        }
+    }
+
+}

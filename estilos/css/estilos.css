@@ -1,3 +1,69 @@
+@charset "UTF-8";
+/* Variables */
+/* Extend */
+.btnPresentacion, .tarjetasCategorias .categoriaGridInfo a, .presentacion .presentacionGrid .g1 .categoriaGridInfo a, .presentacion .presentacionGrid .g2 .categoriaGridInfo a, .presentacion .presentacionGrid .g3 .categoriaGridInfo a, .presentacion .presentacionGrid .g4 .categoriaGridInfo a, .presentacion .presentacionGrid .g5 .categoriaGridInfo a {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: #d66140;
+  color: #ffffff;
+  border: 1px solid #d66140;
+  position: absolute; }
+  .btnPresentacion:hover, .tarjetasCategorias .categoriaGridInfo a:hover, .presentacion .presentacionGrid .g1 .categoriaGridInfo a:hover, .presentacion .presentacionGrid .g2 .categoriaGridInfo a:hover, .presentacion .presentacionGrid .g3 .categoriaGridInfo a:hover, .presentacion .presentacionGrid .g4 .categoriaGridInfo a:hover, .presentacion .presentacionGrid .g5 .categoriaGridInfo a:hover {
+    color: #d66140;
+    background: #ffffff; }
+
+.spanPresentacion, .tarjetasCategorias .categoriaGridInfo .contenedorSpan .spanNum, .presentacion .presentacionGrid .g1 .categoriaGridInfo .contenedorSpan .spanNum, .presentacion .presentacionGrid .g2 .categoriaGridInfo .contenedorSpan .spanNum, .presentacion .presentacionGrid .g3 .categoriaGridInfo .contenedorSpan .spanNum, .presentacion .presentacionGrid .g4 .categoriaGridInfo .contenedorSpan .spanNum, .presentacion .presentacionGrid .g5 .categoriaGridInfo .contenedorSpan .spanNum, .tarjetasCategorias .categoriaGridInfo .contenedorSpan .spanProduct, .presentacion .presentacionGrid .g1 .categoriaGridInfo .contenedorSpan .spanProduct, .presentacion .presentacionGrid .g2 .categoriaGridInfo .contenedorSpan .spanProduct, .presentacion .presentacionGrid .g3 .categoriaGridInfo .contenedorSpan .spanProduct, .presentacion .presentacionGrid .g4 .categoriaGridInfo .contenedorSpan .spanProduct, .presentacion .presentacionGrid .g5 .categoriaGridInfo .contenedorSpan .spanProduct {
+  font-weight: 400;
+  color: #575758;
+  display: block; }
+
+.tarjetasCategorias .categoriaGridInfo, .presentacion .presentacionGrid .g1 .categoriaGridInfo, .presentacion .presentacionGrid .g2 .categoriaGridInfo, .presentacion .presentacionGrid .g3 .categoriaGridInfo, .presentacion .presentacionGrid .g4 .categoriaGridInfo, .presentacion .presentacionGrid .g5 .categoriaGridInfo {
+  height: 100%; }
+  .tarjetasCategorias .categoriaGridInfo h2, .presentacion .presentacionGrid .g1 .categoriaGridInfo h2, .presentacion .presentacionGrid .g2 .categoriaGridInfo h2, .presentacion .presentacionGrid .g3 .categoriaGridInfo h2, .presentacion .presentacionGrid .g4 .categoriaGridInfo h2, .presentacion .presentacionGrid .g5 .categoriaGridInfo h2 {
+    font-size: 24px; }
+  .tarjetasCategorias .categoriaGridInfo .contenedorSpan, .presentacion .presentacionGrid .g1 .categoriaGridInfo .contenedorSpan, .presentacion .presentacionGrid .g2 .categoriaGridInfo .contenedorSpan, .presentacion .presentacionGrid .g3 .categoriaGridInfo .contenedorSpan, .presentacion .presentacionGrid .g4 .categoriaGridInfo .contenedorSpan, .presentacion .presentacionGrid .g5 .categoriaGridInfo .contenedorSpan {
+    margin-top: 15px; }
+    .tarjetasCategorias .categoriaGridInfo .contenedorSpan .spanNum, .presentacion .presentacionGrid .g1 .categoriaGridInfo .contenedorSpan .spanNum, .presentacion .presentacionGrid .g2 .categoriaGridInfo .contenedorSpan .spanNum, .presentacion .presentacionGrid .g3 .categoriaGridInfo .contenedorSpan .spanNum, .presentacion .presentacionGrid .g4 .categoriaGridInfo .contenedorSpan .spanNum, .presentacion .presentacionGrid .g5 .categoriaGridInfo .contenedorSpan .spanNum {
+      font-size: 25px;
+      display: inline-block; }
+    .tarjetasCategorias .categoriaGridInfo .contenedorSpan .spanProduct, .presentacion .presentacionGrid .g1 .categoriaGridInfo .contenedorSpan .spanProduct, .presentacion .presentacionGrid .g2 .categoriaGridInfo .contenedorSpan .spanProduct, .presentacion .presentacionGrid .g3 .categoriaGridInfo .contenedorSpan .spanProduct, .presentacion .presentacionGrid .g4 .categoriaGridInfo .contenedorSpan .spanProduct, .presentacion .presentacionGrid .g5 .categoriaGridInfo .contenedorSpan .spanProduct {
+      font-size: 20px;
+      display: inline-block; }
+  .tarjetasCategorias .categoriaGridInfo a, .presentacion .presentacionGrid .g1 .categoriaGridInfo a, .presentacion .presentacionGrid .g2 .categoriaGridInfo a, .presentacion .presentacionGrid .g3 .categoriaGridInfo a, .presentacion .presentacionGrid .g4 .categoriaGridInfo a, .presentacion .presentacionGrid .g5 .categoriaGridInfo a {
+    position: absolute;
+    bottom: 30px;
+    left: 30px; }
+
+/*
+.categoriaGridInfo{
+    height: 100%;
+
+    h2{
+        font-size: 24px;
+    }
+                    
+    .contenedorSpan{
+        margin-top: 15px;
+        border-radius: 5px;
+
+        .spanNum{
+            font-size: 35px;
+            @extend .spanPresentacion;
+        }
+        .spanProduct{
+            font-size: 30px;
+            @extend .spanPresentacion;
+        }
+    }
+
+    a{
+        bottom: 30px;
+        left: 30px;
+        font-size: 18px;
+        @extend .btnPresentacion;
+    }
+
+}*/
 @font-face {
   font-family: "Rubik";
   src: url("../fuentes/Rubik-VariableFont_wght.ttf"); }
@@ -138,9 +204,6 @@ header {
                 color: #d66140;
                 background: transparent; }
 
-section {
-  height: 600px; }
-
 footer {
   width: 100%;
   padding: 20px 0;
@@ -199,3 +262,76 @@ footer {
               border: 1px solid #ffffff; }
               footer .footerCenter .redirecciones .redireccionesRedes ul li a:hover i {
                 color: #22222c; }
+
+.presentacion {
+  width: 1300px;
+  margin: 0 auto 60px; }
+  .presentacion h1 {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 40px 0;
+    color: #575758; }
+  .presentacion .presentacionGrid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    grid-template-areas: "cocina mate regaleria" "baño   mate juguete"; }
+    .presentacion .presentacionGrid .categoriasGrid {
+      position: relative;
+      overflow: hidden;
+      border-radius: 5px;
+      box-shadow: 0 5px 15px #00000020;
+      background: #fff;
+      padding: 30px; }
+      .presentacion .presentacionGrid .categoriasGrid h2 {
+        position: relative;
+        color: #22222c;
+        display: inline-block;
+        text-transform: uppercase;
+        font-weight: 900; }
+        .presentacion .presentacionGrid .categoriasGrid h2 div {
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          height: 2px;
+          width: 50px;
+          background: #d66140; }
+      .presentacion .presentacionGrid .categoriasGrid img {
+        position: absolute;
+        pointer-events: none; }
+      .presentacion .presentacionGrid .categoriasGrid:hover {
+        transform: scale(1.01); }
+    .presentacion .presentacionGrid .g1 {
+      grid-area: cocina; }
+      .presentacion .presentacionGrid .g1 img {
+        top: 35px;
+        right: -10px; }
+    .presentacion .presentacionGrid .g2 {
+      grid-area: mate; }
+      .presentacion .presentacionGrid .g2 .categoriaGridInfo .contenedorSpan .spanNum {
+        font-size: 35px;
+        display: block; }
+      .presentacion .presentacionGrid .g2 .categoriaGridInfo .contenedorSpan .spanProduct {
+        font-size: 30px; }
+      .presentacion .presentacionGrid .g2 a {
+        font-size: 20px; }
+      .presentacion .presentacionGrid .g2 img {
+        transform: rotateY(180deg);
+        top: 10px;
+        right: -20px; }
+    .presentacion .presentacionGrid .g3 {
+      grid-area: regaleria; }
+      .presentacion .presentacionGrid .g3 img {
+        top: 10px;
+        right: 15px; }
+    .presentacion .presentacionGrid .g4 {
+      grid-area: baño; }
+      .presentacion .presentacionGrid .g4 img {
+        top: 40px;
+        right: 10px; }
+    .presentacion .presentacionGrid .g5 {
+      grid-area: juguete; }
+      .presentacion .presentacionGrid .g5 img {
+        top: 5px;
+        right: -25px; }
