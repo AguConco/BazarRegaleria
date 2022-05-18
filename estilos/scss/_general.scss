@@ -118,7 +118,7 @@ header {
                         &:hover {
                             span {
                                 display: block;
-                                color: $letrasBlancas;
+                                color: #fff;
                                 background: #00000060;
                                 border-radius: 5px;
                                 padding: 3px 5px;
@@ -195,24 +195,13 @@ header {
                     }
 
                     &:nth-child(2) {
-                        background: $colorPrincipal1;
-                        border-radius: 5px;
-                        border: 1px solid $colorPrincipal1;
 
                         a {
-                            color: $letrasBlancas;
-
-
+                            @include btnSitio($colorPrincipal1);
+                            position: relative;
                         }
 
-                        &:hover {
-                            background: transparent;
 
-                            a {
-                                color: $colorPrincipal1;
-                                background: transparent;
-                            }
-                        }
                     }
                 }
 
@@ -274,7 +263,7 @@ footer {
                         color: #aaa;
 
                         &:hover{
-                            color: $letrasBlancas;
+                            color: #fff;
                         }
                     }
                 }
@@ -303,8 +292,8 @@ footer {
                             }
     
                             &:hover {
-                                background: $letrasBlancas;
-                                border: 1px solid $letrasBlancas;
+                                background: #fff;
+                                border: 1px solid #fff;
     
                                 i {
                                     color: $colorPrincipal2;
@@ -318,5 +307,39 @@ footer {
         }
 
 
+    }
+}
+
+.producto{
+    background: #fff;
+    width: 240px;
+    padding: 10px;
+    border-radius: 5px;
+
+    .imgProducto{
+        height: 220px;
+        width: 220px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            object-fit: contain;
+            width: 100%;
+        }
+    }
+
+    .infoProducto{
+        width: 220px;
+        height: 100px;
+
+        h5{
+            font-size: 20px;
+            color: $colorPrincipal2;
+        }
+        h2{
+            font-size: 16px;
+            color: $letrasOscuras;
+        }
     }
 }

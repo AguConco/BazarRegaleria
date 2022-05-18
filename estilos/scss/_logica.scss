@@ -4,26 +4,36 @@ $colorPrincipal1: #d66140;
 $colorPrincipal2: #22222c;
 $letrasOscuras:#575758;
 $letrasClaras: #cecece;
-$letrasBlancas:#ffffff;
 
+/* mixin */
 
-/* Extend */
-
-.btnPresentacion{
+@mixin btnSitio ($b){
     padding: 5px 10px;
     border-radius: 5px;
-    background: $colorPrincipal1;
-    color: $letrasBlancas;
-    border: 1px solid $colorPrincipal1; 
+    background: $b;
     position: absolute;
+    border: 1px solid $colorPrincipal1;
+    @if $b == $colorPrincipal1 {
+        color: #fff;
 
+    }@else{
+        color: $colorPrincipal1;
+    }
 
     &:hover{
-        color: $colorPrincipal1;
-        background: $letrasBlancas;
+        @if $b == $colorPrincipal1 {
+            color: $colorPrincipal1;
+            background: #fff;
+        }@else{
+            background: $colorPrincipal1;
+            color: #fff;
+        }
     
     }
 }
+
+/* Extend */
+
 
 .spanPresentacion{
     font-weight: 400;
@@ -58,38 +68,18 @@ $letrasBlancas:#ffffff;
             position: absolute;
             bottom: 30px;
             left: 30px;
-            @extend .btnPresentacion;
+            @include btnSitio(#fff);
         }
 
     }
 }
-/*
-.categoriaGridInfo{
-    height: 100%;
 
-    h2{
-        font-size: 24px;
-    }
-                    
-    .contenedorSpan{
-        margin-top: 15px;
-        border-radius: 5px;
+.detalleNaranja{
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 2px;
+    width: 50px;
+    background: $colorPrincipal1;
+}
 
-        .spanNum{
-            font-size: 35px;
-            @extend .spanPresentacion;
-        }
-        .spanProduct{
-            font-size: 30px;
-            @extend .spanPresentacion;
-        }
-    }
-
-    a{
-        bottom: 30px;
-        left: 30px;
-        font-size: 18px;
-        @extend .btnPresentacion;
-    }
-
-}*/

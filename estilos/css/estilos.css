@@ -1,17 +1,7 @@
 @charset "UTF-8";
 /* Variables */
+/* mixin */
 /* Extend */
-.btnPresentacion, .tarjetasCategorias .categoriaGridInfo a, .presentacion .presentacionGrid .g1 .categoriaGridInfo a, .presentacion .presentacionGrid .g2 .categoriaGridInfo a, .presentacion .presentacionGrid .g3 .categoriaGridInfo a, .presentacion .presentacionGrid .g4 .categoriaGridInfo a, .presentacion .presentacionGrid .g5 .categoriaGridInfo a {
-  padding: 5px 10px;
-  border-radius: 5px;
-  background: #d66140;
-  color: #ffffff;
-  border: 1px solid #d66140;
-  position: absolute; }
-  .btnPresentacion:hover, .tarjetasCategorias .categoriaGridInfo a:hover, .presentacion .presentacionGrid .g1 .categoriaGridInfo a:hover, .presentacion .presentacionGrid .g2 .categoriaGridInfo a:hover, .presentacion .presentacionGrid .g3 .categoriaGridInfo a:hover, .presentacion .presentacionGrid .g4 .categoriaGridInfo a:hover, .presentacion .presentacionGrid .g5 .categoriaGridInfo a:hover {
-    color: #d66140;
-    background: #ffffff; }
-
 .spanPresentacion, .tarjetasCategorias .categoriaGridInfo .contenedorSpan .spanNum, .presentacion .presentacionGrid .g1 .categoriaGridInfo .contenedorSpan .spanNum, .presentacion .presentacionGrid .g2 .categoriaGridInfo .contenedorSpan .spanNum, .presentacion .presentacionGrid .g3 .categoriaGridInfo .contenedorSpan .spanNum, .presentacion .presentacionGrid .g4 .categoriaGridInfo .contenedorSpan .spanNum, .presentacion .presentacionGrid .g5 .categoriaGridInfo .contenedorSpan .spanNum, .tarjetasCategorias .categoriaGridInfo .contenedorSpan .spanProduct, .presentacion .presentacionGrid .g1 .categoriaGridInfo .contenedorSpan .spanProduct, .presentacion .presentacionGrid .g2 .categoriaGridInfo .contenedorSpan .spanProduct, .presentacion .presentacionGrid .g3 .categoriaGridInfo .contenedorSpan .spanProduct, .presentacion .presentacionGrid .g4 .categoriaGridInfo .contenedorSpan .spanProduct, .presentacion .presentacionGrid .g5 .categoriaGridInfo .contenedorSpan .spanProduct {
   font-weight: 400;
   color: #575758;
@@ -32,38 +22,25 @@
   .tarjetasCategorias .categoriaGridInfo a, .presentacion .presentacionGrid .g1 .categoriaGridInfo a, .presentacion .presentacionGrid .g2 .categoriaGridInfo a, .presentacion .presentacionGrid .g3 .categoriaGridInfo a, .presentacion .presentacionGrid .g4 .categoriaGridInfo a, .presentacion .presentacionGrid .g5 .categoriaGridInfo a {
     position: absolute;
     bottom: 30px;
-    left: 30px; }
+    left: 30px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #fff;
+    position: absolute;
+    border: 1px solid #d66140;
+    color: #d66140; }
+    .tarjetasCategorias .categoriaGridInfo a:hover, .presentacion .presentacionGrid .g1 .categoriaGridInfo a:hover, .presentacion .presentacionGrid .g2 .categoriaGridInfo a:hover, .presentacion .presentacionGrid .g3 .categoriaGridInfo a:hover, .presentacion .presentacionGrid .g4 .categoriaGridInfo a:hover, .presentacion .presentacionGrid .g5 .categoriaGridInfo a:hover {
+      background: #d66140;
+      color: #fff; }
 
-/*
-.categoriaGridInfo{
-    height: 100%;
+.detalleNaranja, .presentacion .presentacionGrid .categoriasGrid h2 div {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  width: 50px;
+  background: #d66140; }
 
-    h2{
-        font-size: 24px;
-    }
-                    
-    .contenedorSpan{
-        margin-top: 15px;
-        border-radius: 5px;
-
-        .spanNum{
-            font-size: 35px;
-            @extend .spanPresentacion;
-        }
-        .spanProduct{
-            font-size: 30px;
-            @extend .spanPresentacion;
-        }
-    }
-
-    a{
-        bottom: 30px;
-        left: 30px;
-        font-size: 18px;
-        @extend .btnPresentacion;
-    }
-
-}*/
 @font-face {
   font-family: "Rubik";
   src: url("../fuentes/Rubik-VariableFont_wght.ttf"); }
@@ -151,7 +128,7 @@ header {
           header .headerCenter .headerNav nav .opcionesNav li:hover span,
           header .headerCenter .headerNav nav .opcionesNav a:hover span {
             display: block;
-            color: #ffffff;
+            color: #fff;
             background: #00000060;
             border-radius: 5px;
             padding: 3px 5px; }
@@ -192,17 +169,17 @@ header {
             border-radius: 5px; }
             header .headerCenter .headerNav .opcionesCuenta div a:hover {
               background: #00000010; }
-          header .headerCenter .headerNav .opcionesCuenta div:nth-child(2) {
-            background: #d66140;
+          header .headerCenter .headerNav .opcionesCuenta div:nth-child(2) a {
+            padding: 5px 10px;
             border-radius: 5px;
-            border: 1px solid #d66140; }
-            header .headerCenter .headerNav .opcionesCuenta div:nth-child(2) a {
-              color: #ffffff; }
-            header .headerCenter .headerNav .opcionesCuenta div:nth-child(2):hover {
-              background: transparent; }
-              header .headerCenter .headerNav .opcionesCuenta div:nth-child(2):hover a {
-                color: #d66140;
-                background: transparent; }
+            background: #d66140;
+            position: absolute;
+            border: 1px solid #d66140;
+            color: #fff;
+            position: relative; }
+            header .headerCenter .headerNav .opcionesCuenta div:nth-child(2) a:hover {
+              color: #d66140;
+              background: #fff; }
 
 footer {
   width: 100%;
@@ -241,7 +218,7 @@ footer {
         footer .footerCenter .redirecciones .redireccionesCategorias li a, footer .footerCenter .redirecciones .redireccionesAyuda li a {
           color: #aaa; }
           footer .footerCenter .redirecciones .redireccionesCategorias li a:hover, footer .footerCenter .redirecciones .redireccionesAyuda li a:hover {
-            color: #ffffff; }
+            color: #fff; }
       footer .footerCenter .redirecciones .redireccionesRedes ul {
         display: flex; }
         footer .footerCenter .redirecciones .redireccionesRedes ul li {
@@ -258,11 +235,36 @@ footer {
               color: #aaa;
               font-size: 18px; }
             footer .footerCenter .redirecciones .redireccionesRedes ul li a:hover {
-              background: #ffffff;
-              border: 1px solid #ffffff; }
+              background: #fff;
+              border: 1px solid #fff; }
               footer .footerCenter .redirecciones .redireccionesRedes ul li a:hover i {
                 color: #22222c; }
 
+.producto {
+  background: #fff;
+  width: 240px;
+  padding: 10px;
+  border-radius: 5px; }
+  .producto .imgProducto {
+    height: 220px;
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .producto .imgProducto img {
+      object-fit: contain;
+      width: 100%; }
+  .producto .infoProducto {
+    width: 220px;
+    height: 100px; }
+    .producto .infoProducto h5 {
+      font-size: 20px;
+      color: #22222c; }
+    .producto .infoProducto h2 {
+      font-size: 16px;
+      color: #575758; }
+
+/* Primera sección */
 .presentacion {
   width: 1300px;
   margin: 0 auto 60px; }
@@ -281,7 +283,6 @@ footer {
       position: relative;
       overflow: hidden;
       border-radius: 5px;
-      box-shadow: 0 5px 15px #00000020;
       background: #fff;
       padding: 30px; }
       .presentacion .presentacionGrid .categoriasGrid h2 {
@@ -290,18 +291,11 @@ footer {
         display: inline-block;
         text-transform: uppercase;
         font-weight: 900; }
-        .presentacion .presentacionGrid .categoriasGrid h2 div {
-          position: absolute;
-          bottom: -5px;
-          left: 0;
-          height: 2px;
-          width: 50px;
-          background: #d66140; }
       .presentacion .presentacionGrid .categoriasGrid img {
         position: absolute;
         pointer-events: none; }
       .presentacion .presentacionGrid .categoriasGrid:hover {
-        transform: scale(1.01); }
+        box-shadow: 0 5px 15px #00000020; }
     .presentacion .presentacionGrid .g1 {
       grid-area: cocina; }
       .presentacion .presentacionGrid .g1 img {
@@ -335,3 +329,67 @@ footer {
       .presentacion .presentacionGrid .g5 img {
         top: 5px;
         right: -25px; }
+
+/* Seccion productos */
+.sectionProductos {
+  width: 1300px;
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-between; }
+
+/* Seccion marcas */
+.sectionMarcas {
+  margin: 0 auto;
+  width: 1300px; }
+  .sectionMarcas .divMarcas {
+    margin: 40px 0;
+    border-radius: 5px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    position: relative; }
+    .sectionMarcas .divMarcas h3 {
+      text-transform: uppercase;
+      color: #575758;
+      font-size: 25px;
+      margin: 0 0;
+      text-align: center;
+      position: relative;
+      z-index: 100; }
+    .sectionMarcas .divMarcas .contenedorMarcas {
+      display: flex; }
+      .sectionMarcas .divMarcas .contenedorMarcas a {
+        display: inline-block;
+        width: 120px;
+        height: 120px;
+        margin: 0 20px; }
+        .sectionMarcas .divMarcas .contenedorMarcas a img {
+          object-fit: contain;
+          width: 100%;
+          height: 100%;
+          position: relative;
+          z-index: 100; }
+      .sectionMarcas .divMarcas .contenedorMarcas .rigolleau img {
+        top: -10px; }
+      .sectionMarcas .divMarcas .contenedorMarcas .carol img {
+        top: 5px; }
+      .sectionMarcas .divMarcas .contenedorMarcas .tramontina img {
+        top: 5px; }
+    .sectionMarcas .divMarcas .circulo {
+      border: 15px solid #d66140;
+      border-radius: 50%;
+      position: absolute;
+      z-index: 0;
+      height: 150px;
+      width: 150px; }
+    .sectionMarcas .divMarcas .c1 {
+      left: -70px;
+      top: 50px; }
+    .sectionMarcas .divMarcas .c2 {
+      left: 420px;
+      top: -125px; }
+    .sectionMarcas .divMarcas .c3 {
+      right: -80px;
+      top: 70px; }

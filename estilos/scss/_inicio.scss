@@ -1,123 +1,228 @@
+/* Primera sección */
 
-.presentacion{
+.presentacion {
     width: 1300px;
     margin: 0 auto 60px;
 
-    h1{
+    h1 {
         text-transform: uppercase;
         text-align: center;
         margin: 40px 0;
         color: $letrasOscuras;
     }
 
-    .presentacionGrid{
+    .presentacionGrid {
         display: grid;
         gap: 10px;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2,200px);
-        grid-template-areas:"cocina mate regaleria"
-                            "baño   mate juguete";
+        grid-template-rows: repeat(2, 200px);
+        grid-template-areas: "cocina mate regaleria"
+            "baño   mate juguete";
 
-        .categoriasGrid{
+        .categoriasGrid {
             position: relative;
             overflow: hidden;
             border-radius: 5px;
-            box-shadow: 0 5px 15px #00000020;
             background: #fff;
             padding: 30px;
 
-            h2{
+            h2 {
                 position: relative;
                 color: $colorPrincipal2;
-                display: inline-block;                
+                display: inline-block;
                 text-transform: uppercase;
                 font-weight: 900;
 
-                div{
-                    position: absolute;
-                    bottom: -5px;
-                    left: 0;
-                    height: 2px;
-                    width: 50px;
-                    background: $colorPrincipal1;
+                div {
+                    @extend .detalleNaranja;
                 }
             }
 
-            img{
+            img {
                 position: absolute;
                 pointer-events: none;
             }
 
-            &:hover{
-                transform: scale(1.01);
-
+            &:hover {
+                box-shadow: 0 5px 15px #00000020;
             }
         }
 
-        .g1{
-            grid-area: cocina;
+        .g1 {
             @extend .tarjetasCategorias;
+            grid-area: cocina;
 
-            img{
+            img {
                 top: 35px;
                 right: -10px;
             }
         }
-        .g2{
+
+        .g2 {
+            @extend .tarjetasCategorias;
             grid-area: mate;
 
-            @extend .tarjetasCategorias;
-            .categoriaGridInfo{
+            .categoriaGridInfo {
 
-                .contenedorSpan{
-                    .spanNum{
+                .contenedorSpan {
+                    .spanNum {
                         font-size: 35px;
                         display: block;
                     }
-                    .spanProduct{
+
+                    .spanProduct {
                         font-size: 30px;
                     }
                 }
             }
 
-            a{
+            a {
                 font-size: 20px;
             }
 
-            img{
+            img {
                 transform: rotateY(180deg);
                 top: 10px;
                 right: -20px;
             }
 
         }
-        .g3{
-            grid-area: regaleria;
+
+        .g3 {
             @extend .tarjetasCategorias;
-            
-            img{
+            grid-area: regaleria;
+
+            img {
                 top: 10px;
                 right: 15px;
             }
         }
-        .g4{
-            grid-area: baño;
+
+        .g4 {
             @extend .tarjetasCategorias;
-            
-            img{
+            grid-area: baño;
+
+            img {
                 top: 40px;
                 right: 10px;
             }
         }
-        .g5{
-            grid-area: juguete;
+
+        .g5 {
             @extend .tarjetasCategorias;
-            
-            img{
+            grid-area: juguete;
+
+            img {
                 top: 5px;
                 right: -25px;
             }
         }
     }
 
+}
+
+/* Seccion productos */
+
+.sectionProductos{
+    width: 1300px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+/* Seccion marcas */
+
+.sectionMarcas {
+    margin: 0 auto;
+    width: 1300px;
+
+
+    .divMarcas {
+        margin: 40px 0;
+        border-radius: 5px;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        overflow: hidden;
+        position: relative;
+
+
+        h3 {
+            text-transform: uppercase;
+            color: $letrasOscuras;
+            font-size: 25px;
+            margin: 0 0;
+            text-align: center;
+            position: relative;
+            z-index: 100;
+
+        }
+
+        .contenedorMarcas {
+            display: flex;
+
+            a {
+                display: inline-block;
+                width: 120px;
+                height: 120px;
+                margin: 0 20px;
+
+                img {
+                    object-fit: contain;
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    z-index: 100;
+                }
+
+
+            }
+
+            .rigolleau {
+                img {
+                    top: -10px;
+                }
+            }
+
+            .carol {
+                img {
+                    top: 5px;
+                }
+            }
+
+            .tramontina {
+                img {
+                    top: 5px;
+                }
+            }
+
+        }
+
+        .circulo {
+            border: 15px solid $colorPrincipal1;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 0;
+            height: 150px;
+            width: 150px;
+        }
+
+        .c1 {
+            left: -70px;
+            top: 50px;
+        }
+
+        .c2 {
+            left: 420px;
+            top: -125px;
+        }
+
+        .c3 {
+            right: -80px;
+            top: 70px;
+        }
+    }
 }
