@@ -54,6 +54,7 @@ header {
 
             .actual {
                 color: $colorPrincipal1;
+                fill: $colorPrincipal1;
             }
 
             nav {
@@ -197,7 +198,7 @@ header {
                     &:nth-child(2) {
 
                         a {
-                            @include btnSitio($colorPrincipal1);
+                            @include btnSitio(1);
                             position: relative;
                         }
 

@@ -2,79 +2,93 @@
 
 $colorPrincipal1: #d66140;
 $colorPrincipal2: #22222c;
-$letrasOscuras:#575758;
+$letrasOscuras: #575758;
 $letrasClaras: #cecece;
 
 /* mixin */
 
-@mixin btnSitio ($b){
+@mixin btnSitio ($b) {
     padding: 5px 10px;
     border-radius: 5px;
-    background: $b;
     position: absolute;
     border: 1px solid $colorPrincipal1;
-    @if $b == $colorPrincipal1 {
+
+    @if $b == 1 {
         color: #fff;
+        background: $colorPrincipal1;
 
-    }@else{
-        color: $colorPrincipal1;
-    }
-
-    &:hover{
-        @if $b == $colorPrincipal1 {
+        &:hover {
             color: $colorPrincipal1;
             background: #fff;
-        }@else{
+        }
+
+    }
+
+    @if $b == 2 {
+        color: $colorPrincipal1;
+        background: #fff;
+
+        &:hover {
             background: $colorPrincipal1;
             color: #fff;
         }
-    
+    }
+
+    @if $b == 3 {
+        border: 1px solid transparent;
+        color: $colorPrincipal1;
+        background: #00000010;
+
+        &:hover{
+            background: #00000015;
+        }
     }
 }
 
 /* Extend */
 
 
-.spanPresentacion{
+.spanPresentacion {
     font-weight: 400;
     color: $letrasOscuras;
     display: block;
 }
 
-.tarjetasCategorias{
-    .categoriaGridInfo{
+.tarjetasCategorias {
+    .categoriaGridInfo {
         height: 100%;
 
-        h2{
+        h2 {
             font-size: 24px;
         }
-                        
-        .contenedorSpan{
+
+        .contenedorSpan {
             margin-top: 15px;
 
-            .spanNum{
+            .spanNum {
                 font-size: 25px;
                 display: inline-block;
                 @extend .spanPresentacion;
             }
-            .spanProduct{
+
+            .spanProduct {
                 font-size: 20px;
                 display: inline-block;
                 @extend .spanPresentacion;
             }
         }
 
-        a{
+        a {
             position: absolute;
             bottom: 30px;
             left: 30px;
-            @include btnSitio(#fff);
+            @include btnSitio(2);
         }
 
     }
 }
 
-.detalleNaranja{
+.detalleNaranja {
     position: absolute;
     bottom: -5px;
     left: 0;
@@ -82,7 +96,14 @@ $letrasClaras: #cecece;
     width: 50px;
     background: $colorPrincipal1;
 }
-.sombra{
+
+.sombra {
     box-shadow: 0 5px 15px #00000020;
 }
 
+.subtitulo {
+    color: $letrasOscuras;
+    margin: 0 0 40px 0;
+    font-size: 20px;
+    text-transform: uppercase;
+}

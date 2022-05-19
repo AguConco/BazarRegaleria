@@ -25,10 +25,10 @@
     left: 30px;
     padding: 5px 10px;
     border-radius: 5px;
-    background: #fff;
     position: absolute;
     border: 1px solid #d66140;
-    color: #d66140; }
+    color: #d66140;
+    background: #fff; }
     .tarjetasCategorias .categoriaGridInfo a:hover, .presentacion .presentacionGrid .g1 .categoriaGridInfo a:hover, .presentacion .presentacionGrid .g2 .categoriaGridInfo a:hover, .presentacion .presentacionGrid .g3 .categoriaGridInfo a:hover, .presentacion .presentacionGrid .g4 .categoriaGridInfo a:hover, .presentacion .presentacionGrid .g5 .categoriaGridInfo a:hover {
       background: #d66140;
       color: #fff; }
@@ -43,6 +43,12 @@
 
 .sombra, .producto:hover, .presentacion .presentacionGrid .categoriasGrid:hover {
   box-shadow: 0 5px 15px #00000020; }
+
+.subtitulo, .sectionProductos h3, .sectionCarrito h3 {
+  color: #575758;
+  margin: 0 0 40px 0;
+  font-size: 20px;
+  text-transform: uppercase; }
 
 @font-face {
   font-family: "Rubik";
@@ -86,7 +92,8 @@ header {
       display: flex;
       align-items: center; }
       header .headerCenter .headerNav .actual {
-        color: #d66140; }
+        color: #d66140;
+        fill: #d66140; }
       header .headerCenter .headerNav nav {
         display: flex;
         align-items: center; }
@@ -175,10 +182,10 @@ header {
           header .headerCenter .headerNav .opcionesCuenta div:nth-child(2) a {
             padding: 5px 10px;
             border-radius: 5px;
-            background: #d66140;
             position: absolute;
             border: 1px solid #d66140;
             color: #fff;
+            background: #d66140;
             position: relative; }
             header .headerCenter .headerNav .opcionesCuenta div:nth-child(2) a:hover {
               color: #d66140;
@@ -344,12 +351,6 @@ footer {
 .sectionProductos {
   width: 1300px;
   margin: 60px auto; }
-  .sectionProductos h3 {
-    position: relative;
-    color: #575758;
-    margin: 0 0 40px 0;
-    font-size: 20px;
-    text-transform: uppercase; }
   .sectionProductos .contenedorProductos {
     display: flex;
     justify-content: space-between; }
@@ -410,3 +411,162 @@ footer {
     .sectionMarcas .divMarcas .c3 {
       right: -80px;
       top: 70px; }
+
+.sectionCarrito {
+  width: 1300px;
+  margin: 60px auto; }
+  .sectionCarrito .contenedorPedidoCarrito {
+    display: flex;
+    justify-content: space-between; }
+    .sectionCarrito .contenedorPedidoCarrito .carrito {
+      width: 1000px;
+      border-radius: 5px; }
+      .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorCheck {
+        position: relative;
+        height: 20px;
+        width: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorCheck .efectoCheck {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: radial-gradient(transparent 1px, #1872ff);
+          opacity: 0;
+          height: 30px;
+          width: 30px;
+          border-radius: 50%;
+          z-index: 1;
+          pointer-events: none; }
+        .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorCheck input[type="checkbox"] {
+          height: 17px;
+          width: 17px;
+          position: relative;
+          z-index: 10; }
+          .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorCheck input[type="checkbox"]:checked + .efectoCheck {
+            animation: seleccionado .8s 1; }
+
+@keyframes seleccionado {
+  0% {
+    opacity: .6; }
+  100% {
+    opacity: 0; } }
+      .sectionCarrito .contenedorPedidoCarrito .carrito .opcionesEliminar {
+        background: #fff;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        padding: 10px; }
+        .sectionCarrito .contenedorPedidoCarrito .carrito .opcionesEliminar button {
+          margin-left: 15px;
+          border: none;
+          background: none;
+          color: #575758;
+          font-size: 16px;
+          padding: 5px;
+          border-radius: 5px;
+          cursor: not-allowed;
+          opacity: .6; }
+          .sectionCarrito .contenedorPedidoCarrito .carrito .opcionesEliminar button:hover {
+            background: #00000010; }
+      .sectionCarrito .contenedorPedidoCarrito .carrito .productoCarrito {
+        background: #fff;
+        border-radius: 5px; }
+    .sectionCarrito .contenedorPedidoCarrito .detallePedido {
+      background: #fff;
+      border-radius: 5px;
+      position: sticky;
+      top: 5px;
+      height: 300px;
+      width: 290px; }
+      .sectionCarrito .contenedorPedidoCarrito .detallePedido h4 {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 20px;
+        font-weight: 400; }
+      .sectionCarrito .contenedorPedidoCarrito .detallePedido .contenedorImgDetalle {
+        display: flex;
+        justify-content: center; }
+        .sectionCarrito .contenedorPedidoCarrito .detallePedido .contenedorImgDetalle div {
+          height: 60px;
+          width: 60px;
+          border-radius: 50%;
+          overflow: hidden;
+          margin: 20px 0;
+          box-shadow: 0 3px 10px #00000020;
+          position: relative;
+          background: #fff; }
+          .sectionCarrito .contenedorPedidoCarrito .detallePedido .contenedorImgDetalle div img {
+            object-fit: contain;
+            width: 60px; }
+        .sectionCarrito .contenedorPedidoCarrito .detallePedido .contenedorImgDetalle div:nth-child(1) {
+          transform: scale(0.9);
+          right: -33px;
+          z-index: -1; }
+        .sectionCarrito .contenedorPedidoCarrito .detallePedido .contenedorImgDetalle div:nth-child(3) {
+          transform: scale(0.9);
+          right: 33px;
+          z-index: -1; }
+      .sectionCarrito .contenedorPedidoCarrito .detallePedido h5 {
+        display: block;
+        width: 140px;
+        text-align: center;
+        margin: 10px auto;
+        position: relative;
+        font-size: 17px;
+        font-weight: 400; }
+        .sectionCarrito .contenedorPedidoCarrito .detallePedido h5 .avisoPecioEnvio i {
+          color: #aaa;
+          position: absolute;
+          top: -5px;
+          right: -10px;
+          font-size: 12px; }
+        .sectionCarrito .contenedorPedidoCarrito .detallePedido h5 .avisoPecioEnvio span {
+          position: absolute;
+          background: #00000060;
+          font-weight: 300;
+          width: 120px;
+          color: #fff;
+          padding: 2px;
+          border-radius: 5px;
+          font-size: 14px;
+          top: -20px;
+          right: -95%;
+          display: none; }
+        .sectionCarrito .contenedorPedidoCarrito .detallePedido h5 .avisoPecioEnvio:hover span {
+          display: block; }
+      .sectionCarrito .contenedorPedidoCarrito .detallePedido .btnOpcionesPedido {
+        width: 200px;
+        margin: 10px auto 0; }
+        .sectionCarrito .contenedorPedidoCarrito .detallePedido .btnOpcionesPedido .seguirCompra {
+          padding: 5px 10px;
+          border-radius: 5px;
+          position: absolute;
+          border: 1px solid #d66140;
+          border: 1px solid transparent;
+          color: #d66140;
+          background: #00000010;
+          position: relative;
+          padding: 7px 10px; }
+          .sectionCarrito .contenedorPedidoCarrito .detallePedido .btnOpcionesPedido .seguirCompra:hover {
+            background: #00000015; }
+        .sectionCarrito .contenedorPedidoCarrito .detallePedido .btnOpcionesPedido .continuarCompra {
+          padding: 5px 10px;
+          border-radius: 5px;
+          position: absolute;
+          border: 1px solid #d66140;
+          color: #fff;
+          background: #d66140;
+          position: relative;
+          padding: 7px 10px; }
+          .sectionCarrito .contenedorPedidoCarrito .detallePedido .btnOpcionesPedido .continuarCompra:hover {
+            color: #d66140;
+            background: #fff; }
+        .sectionCarrito .contenedorPedidoCarrito .detallePedido .btnOpcionesPedido button {
+          font-size: 20px;
+          cursor: pointer;
+          width: 200px;
+          margin: 5px 0; }

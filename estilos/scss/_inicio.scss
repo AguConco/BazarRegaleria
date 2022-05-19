@@ -128,11 +128,7 @@
     margin: 60px auto;
 
     h3{
-        position: relative;
-        color: $letrasOscuras;     
-        margin: 0 0 40px 0;
-        font-size: 20px;
-        text-transform: uppercase;
+        @extend .subtitulo;
     }
 
     .contenedorProductos{
