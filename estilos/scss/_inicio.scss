@@ -44,7 +44,7 @@
             }
 
             &:hover {
-                box-shadow: 0 5px 15px #00000020;
+                @extend .sombra;
             }
         }
 
@@ -125,9 +125,20 @@
 
 .sectionProductos{
     width: 1300px;
-    margin: 40px auto;
-    display: flex;
-    justify-content: space-between;
+    margin: 60px auto;
+
+    h3{
+        position: relative;
+        color: $letrasOscuras;     
+        margin: 0 0 40px 0;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+
+    .contenedorProductos{
+        display: flex;
+        justify-content: space-between;
+    }
 
 
 }

@@ -232,7 +232,7 @@ footer {
         }
 
         .redirecciones {
-            margin: 30px 0 ;
+            margin: 30px 0;
             display: flex;
             justify-content: space-evenly;
 
@@ -255,27 +255,29 @@ footer {
             }
 
 
-            .redireccionesCategorias, .redireccionesAyuda {
+            .redireccionesCategorias,
+            .redireccionesAyuda {
                 li {
                     margin: 5px 0;
 
                     a {
                         color: #aaa;
 
-                        &:hover{
+                        &:hover {
                             color: #fff;
                         }
                     }
                 }
             }
+
             .redireccionesRedes {
-            
+
                 ul {
                     display: flex;
-    
+
                     li {
                         margin: 0 5px;
-    
+
                         a {
                             display: flex;
                             height: 35px;
@@ -284,17 +286,17 @@ footer {
                             align-items: center;
                             border-radius: 50%;
                             border: 1px solid #aaa;
-    
+
                             i {
                                 color: #aaa;
                                 font-size: 18px;
 
                             }
-    
+
                             &:hover {
                                 background: #fff;
                                 border: 1px solid #fff;
-    
+
                                 i {
                                     color: $colorPrincipal2;
                                 }
@@ -310,36 +312,49 @@ footer {
     }
 }
 
-.producto{
+
+
+.producto {
+    display: inline-block;
     background: #fff;
     width: 240px;
-    padding: 10px;
     border-radius: 5px;
 
-    .imgProducto{
+    .imgProducto {
         height: 220px;
-        width: 220px;
+        width: 240px;
+        padding: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
 
-        img{
+        img {
             object-fit: contain;
-            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
         }
     }
 
-    .infoProducto{
-        width: 220px;
+    .infoProducto {
+        width: 240px;
         height: 100px;
+        padding: 10px;
+        border-top: 1px solid #eee;
 
-        h5{
-            font-size: 20px;
-            color: $colorPrincipal2;
-        }
-        h2{
+        h2 {
             font-size: 16px;
             color: $letrasOscuras;
+            font-weight: 400;
         }
+
+        h5 {
+            font-size: 24px;
+            color: $colorPrincipal2;
+            margin: 10px 0;
+        }
+    }
+
+    &:hover{
+        @extend .sombra;
     }
 }

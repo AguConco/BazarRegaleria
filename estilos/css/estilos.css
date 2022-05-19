@@ -41,6 +41,9 @@
   width: 50px;
   background: #d66140; }
 
+.sombra, .producto:hover, .presentacion .presentacionGrid .categoriasGrid:hover {
+  box-shadow: 0 5px 15px #00000020; }
+
 @font-face {
   font-family: "Rubik";
   src: url("../fuentes/Rubik-VariableFont_wght.ttf"); }
@@ -213,11 +216,14 @@ footer {
         height: 50px;
         width: 200px;
         margin: 20px 0; }
-      footer .footerCenter .redirecciones .redireccionesCategorias li, footer .footerCenter .redirecciones .redireccionesAyuda li {
+      footer .footerCenter .redirecciones .redireccionesCategorias li,
+      footer .footerCenter .redirecciones .redireccionesAyuda li {
         margin: 5px 0; }
-        footer .footerCenter .redirecciones .redireccionesCategorias li a, footer .footerCenter .redirecciones .redireccionesAyuda li a {
+        footer .footerCenter .redirecciones .redireccionesCategorias li a,
+        footer .footerCenter .redirecciones .redireccionesAyuda li a {
           color: #aaa; }
-          footer .footerCenter .redirecciones .redireccionesCategorias li a:hover, footer .footerCenter .redirecciones .redireccionesAyuda li a:hover {
+          footer .footerCenter .redirecciones .redireccionesCategorias li a:hover,
+          footer .footerCenter .redirecciones .redireccionesAyuda li a:hover {
             color: #fff; }
       footer .footerCenter .redirecciones .redireccionesRedes ul {
         display: flex; }
@@ -241,28 +247,34 @@ footer {
                 color: #22222c; }
 
 .producto {
+  display: inline-block;
   background: #fff;
   width: 240px;
-  padding: 10px;
   border-radius: 5px; }
   .producto .imgProducto {
     height: 220px;
-    width: 220px;
+    width: 240px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center; }
     .producto .imgProducto img {
       object-fit: contain;
-      width: 100%; }
+      max-width: 100%;
+      max-height: 100%; }
   .producto .infoProducto {
-    width: 220px;
-    height: 100px; }
-    .producto .infoProducto h5 {
-      font-size: 20px;
-      color: #22222c; }
+    width: 240px;
+    height: 100px;
+    padding: 10px;
+    border-top: 1px solid #eee; }
     .producto .infoProducto h2 {
       font-size: 16px;
-      color: #575758; }
+      color: #575758;
+      font-weight: 400; }
+    .producto .infoProducto h5 {
+      font-size: 24px;
+      color: #22222c;
+      margin: 10px 0; }
 
 /* Primera sección */
 .presentacion {
@@ -294,8 +306,6 @@ footer {
       .presentacion .presentacionGrid .categoriasGrid img {
         position: absolute;
         pointer-events: none; }
-      .presentacion .presentacionGrid .categoriasGrid:hover {
-        box-shadow: 0 5px 15px #00000020; }
     .presentacion .presentacionGrid .g1 {
       grid-area: cocina; }
       .presentacion .presentacionGrid .g1 img {
@@ -333,9 +343,16 @@ footer {
 /* Seccion productos */
 .sectionProductos {
   width: 1300px;
-  margin: 40px auto;
-  display: flex;
-  justify-content: space-between; }
+  margin: 60px auto; }
+  .sectionProductos h3 {
+    position: relative;
+    color: #575758;
+    margin: 0 0 40px 0;
+    font-size: 20px;
+    text-transform: uppercase; }
+  .sectionProductos .contenedorProductos {
+    display: flex;
+    justify-content: space-between; }
 
 /* Seccion marcas */
 .sectionMarcas {
