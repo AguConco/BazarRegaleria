@@ -29,8 +29,8 @@
                     transform: translate(-50%,-50%);
                     background: radial-gradient(transparent 1px, #1872ff);
                     opacity: 0;
-                    height: 30px;
-                    width: 30px;
+                    height: 0px;
+                    width: 0px;
                     border-radius: 50%;
                     z-index: 1;
                     pointer-events: none;
@@ -44,13 +44,22 @@
     
                     &:checked{
                         +.efectoCheck{
-                            animation: seleccionado .8s 1;
+
+                            animation: seleccionado 1s 1;
 
                             @keyframes seleccionado {
                                 0%{
+
                                     opacity: .6;
+
+                                }
+                                1%{
+                                    height: 30px;
+                                    width: 30px;
                                 }
                                 100%{
+                                    height: 0;
+                                    width: 0;
                                     opacity: 0;
                                 }
                             }
@@ -66,7 +75,7 @@
                 border-radius: 5px;
                 display: flex;
                 align-items: center;
-                padding: 10px;
+                padding: 10px 20px;
 
                 button{
                     margin-left: 15px;
@@ -86,10 +95,114 @@
 
             }
 
-            .productoCarrito{
+            .contenedorProductosCarrito{
+                padding: 10px 20px;
                 background: #fff;
                 border-radius: 5px;
+                min-height: 240px;
 
+                .productoCarrito{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    height: 100px;
+                    width: 100%;
+    
+                    .contenedorCarrito{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 130px;
+
+
+                        .imgCarrito{
+                            width: 80px;
+                            height: 80px;
+        
+                            img{
+                                object-fit: contain;
+                                max-width: 80px;
+                                max-height: 80px;
+                            }
+                        }
+                    }
+    
+                    .productoCarritoNombre{
+                        width: 500px;
+
+
+                        h2{
+                            min-width: 300px;
+                            max-width: 350px;
+                            font-size: 18px;
+                            font-weight: 400;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                        } 
+
+                        a{
+                            display: block;
+                            color: $letrasOscuras;
+                            margin-top: 5px;
+                            font-size: 15px;
+
+                            &:hover{
+                                color: $colorPrincipal1;
+                            }
+                        }
+                    }
+    
+                    .cantidadProductoCarrito{
+                        width: 150px;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+
+                        input{
+                            height: 100%;
+                            width: 50px;
+                            font-size: 16px;
+                            padding: 5px;
+                            outline: none;
+                            border: none;
+                            border-top: 1px solid #ccc;
+                            border-bottom: 1px solid #ccc;
+                            text-align: center;
+
+                        }
+
+                        button{
+                            height: 100%;
+                            font-size: 20px;
+                            padding: 5px;
+                            background: transparent;
+                            border: 1px solid #ccc;
+                            outline: none;
+                            cursor: pointer;
+
+                            &:nth-child(1){
+                                border-radius: 5px 0 0 5px;
+                                border-right: none;
+                            }
+
+                            &:nth-child(3){
+                                border-radius: 0 5px 5px 0;
+                                border-left: none;
+                            }
+                        }
+
+
+                    }
+
+                    .productoCarritoPrecio{
+                        width: 100px;
+                        span{
+                            font-size: 20px;
+                            font-weight: 600;
+                        }
+                    }
+                }
             }
         }
     
@@ -143,7 +256,7 @@
     
             h5 {
                 display: block;
-                width: 140px;
+                width: 150px;
                 text-align: center;
                 margin: 10px auto;
                 position: relative;
