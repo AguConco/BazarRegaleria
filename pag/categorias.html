@@ -33,7 +33,7 @@
                             </li>
                             <li>
                                 <a href="./carrito.html" id="carrito">
-                                    <svg class="actual" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#575758" class="bi bi-cart"  viewBox="0 0 16 16">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#575758" class="bi bi-cart"  viewBox="0 0 16 16">
                                         <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
                                     </svg>
                                     <span>Carrito</span>
@@ -137,78 +137,96 @@
             </div>
         </div>
     </header>
-    <section class="sectionCarrito">
-        <h3>CARRITO</h3>
-        <div class="contenedorPedidoCarrito">
-            <div class="carrito">
-                <div class="opcionesEliminar">
-                    <div class="contenedorCheck"><input id="checkEliminarTodo" type="checkbox" name="" id=""><div class="efectoCheck"></div></div>
-                    <button id="">Eliminar selección</button>
+    <section class="sectionProductosCategorias">
+        <h1>cocina
+            <div></div>
+        </h1>
+        <div class="contenedorPrincipalCategoria">
+            <aside class="filtros">
+                <div>
+                    <h2>Subcategorías</h2>
+                    <ul>
+                        <li>Todas</li>
+                        <li>Aluminio y acero</li>
+                        <li>Melamina</li>
+                        <li>Teflón</li>
+                        <li>Cerámica</li>
+                        <li>Herméticos</li>
+                        <li>Platos y compoteras</li>
+                        <li>Vasos y copas</li>
+                        <li>Jarras, jarros y tazas</li>
+                        <li>Cubiertos</li>
+                        <li>Utensillos</li>
+                        <li>Bandejas, bowls y ensaladeras</li>
+                        <li>Botellas y bidones</li>
+                        <li>Tablas</li>
+                        <li>Artículos de asador</li>
+                        <li>Secaplatos y coladores</li>
+                        <li>Repostería</li>
+                        <li>Electrodomésticos</li>
+                        <li>Infantiles</li>
+                        <li>Rigolleau</li>
+                        <li>Carol</li>
+                        <li>Tramontina</li>
+                    </ul>
                 </div>
-                <div class="contenedorProductosCarrito">
-                    <div class="productoCarrito">
-                        <div class="contenedorCarrito">
-                            <div class="contenedorCheck"><input type="checkbox" name="" id=""><div class="efectoCheck"></div></div>
-                            <div class="imgCarrito"><img src="../multimedia/imgProductos/alfombre_coco_goma.png" alt=""></div>
-                        </div>
-                        <div class="productoCarritoNombre">
-                            <h2>Alfombra de coco y goma</h2>
-                            <a href="#" class="opcionesProductoCarrito">Más productos de Limpieza y Baño</a>
-                        </div>
-                        <div class="cantidadProductoCarrito"><button>-</button><input type="text" autocomplete="off" value="1"><button>+</button></div>
-                        <div class="productoCarritoPrecio"><span>$360</span></div>
-                    </div>
-                    <div class="productoCarrito">
-                        <div class="contenedorCarrito">
-                            <div class="contenedorCheck"><input type="checkbox" name="" id=""><div class="efectoCheck"></div></div>
-                            <div class="imgCarrito"><img src="../multimedia/imgProductos/bombilla-pico-loro.jpg" alt=""></div>
-                        </div>
-                        <div class="productoCarritoNombre">
-                            <h2>Bombilla pico loro</h2>
-                            <a href="#" class="opcionesProductoCarrito">Más productos de Mates y Termos</a>
-                        </div>
-                        <div class="cantidadProductoCarrito"><button>-</button><input type="text" autocomplete="off" value="1"><button>+</button></div>
-                        <div class="productoCarritoPrecio"><span>$540</span></div>
-                    </div>
-                    <div class="productoCarrito">
-                        <div class="contenedorCarrito">
-                            <div class="contenedorCheck"><input type="checkbox" name="" id=""><div class="efectoCheck"></div></div>
-                            <div class="imgCarrito"><img src="../multimedia/imgProductos/termo-bala.png" alt=""></div>
-                        </div>
-                        <div class="productoCarritoNombre">
-                            <h2>Termo bala </h2>
-                            <a href="#" class="opcionesProductoCarrito">Más productos de Mates y Termos</a>
-                        </div>
-                        <div class="cantidadProductoCarrito"><button>-</button><input type="text" autocomplete="off" value="1"><button>+</button></div>
-                        <div class="productoCarritoPrecio"><span>$1740</span></div>
-                    </div>
-                </div>
-            </div>
-            <aside class="detallePedido">
-                <h4>Detalle de tu pedido</h4>
-                <div class="contenedorImgDetalle">
-                    <div><img src="../multimedia/imgProductos/bombilla-pico-loro.jpg" alt=""></div>
-                    <div><img class="img1" src="../multimedia/imgProductos/alfombre_coco_goma.png" alt=""></div>
-                    <div><img src="../multimedia/imgProductos/termo-bala.png" alt=""></div>
-                </div>
-                <h5>
-                    Subtotal:
-                    <span>$2640</span>
-                    <div class="avisoPecioEnvio"><i class="fas fa-exclamation-circle"></i><span>En el subtotal no esta incluido el costo del envío</span></div>
-                </h5>
-                <div class="btnOpcionesPedido">
-                    <button class="seguirCompra">Seguir comprando</button>
-                    <button class="continuarCompra">Continuar compra</button>
+                <div>
+                    <h2>Ordenar por</h2>
+                    <ul>
+                        <li>Más relevante</li>
+                        <li>Menor precio</li>
+                        <li>Mayor precio</li>
+                    </ul>
                 </div>
             </aside>
+            <div class="contenedorProductosCategoria">
+                <a href="#" class="producto">
+                    <div class="imgProducto">
+                        <img src="../multimedia/imgproductos/cubiertos_carol_frasco.jpg" alt="">
+                    </div>
+                    <div class="infoProducto">
+                        <h2>Cubiertos x24 Carol c/organizador</h2>
+                        <h5>$1975</h5>
+                    </div>
+                </a>
+                <a href="#" class="producto">
+                    <div class="imgProducto">
+                        <img src="../multimedia/imgproductos/cubiertos_carol_frasco.jpg" alt="">
+                    </div>
+                    <div class="infoProducto">
+                        <h2>Cubiertos x24 Carol c/organizador</h2>
+                        <h5>$1975</h5>
+                    </div>
+                </a>
+                <a href="#" class="producto">
+                    <div class="imgProducto">
+                        <img src="../multimedia/imgproductos/cubiertos_carol_frasco.jpg" alt="">
+                    </div>
+                    <div class="infoProducto">
+                        <h2>Cubiertos x24 Carol c/organizador</h2>
+                        <h5>$1975</h5>
+                    </div>
+                </a>
+                <a href="#" class="producto">
+                    <div class="imgProducto">
+                        <img src="../multimedia/imgproductos/cubiertos_carol_frasco.jpg" alt="">
+                    </div>
+                    <div class="infoProducto">
+                        <h2>Cubiertos x24 Carol c/organizador</h2>
+                        <h5>$1975</h5>
+                    </div>
+                </a>
+                <a href="#" class="producto">
+                    <div class="imgProducto">
+                        <img src="../multimedia/imgproductos/cubiertos_carol_frasco.jpg" alt="">
+                    </div>
+                    <div class="infoProducto">
+                        <h2>Cubiertos x24 Carol c/organizador</h2>
+                        <h5>$1975</h5>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="carritoVacio">
-            <span>¡Tu carrito está vacío!</span>
-        </div>
-    </section>
-    <section class="sectionArrepentimiento">
-        <p>¿Queres cancelar un pedido que hiciste?</p>
-        <a href="#" id="btnArrepentimiento">Cancelar pedido</a>
     </section>
     <footer>   
         <div class="footerCenter">

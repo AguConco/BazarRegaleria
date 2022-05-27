@@ -328,29 +328,17 @@
     }
 
     .carritoVacio{
+        // display: none;
         width: 100%;
         background: #fff;
         border-radius: 5px;
-        padding: 50px 0;
+        padding: 75px 0;
         
-        p{
+        span{
+            display: block;
             font-size: 25px;
             color: $letrasOscuras;
             text-align: center;
-
-        }
-
-        a{
-            margin-top: 10px;
-            display: block;
-            text-align: center;
-            color: #aaa;
-            font-weight: 300;
-
-            &:hover{
-                text-decoration: underline;
-            }
-
         }
     }
 

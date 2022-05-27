@@ -3,7 +3,6 @@
     src: url("../fuentes/Rubik-VariableFont_wght.ttf");
 }
 
-
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +12,6 @@
     &::selection {
         background: #00000020;
     }
-
 }
 
 ul {
@@ -31,7 +29,6 @@ body {
 header {
     width: 100%;
     border-bottom: 1px solid #00000020;
-    text-transform: uppercase;
     background: #fff;
     height: 70px;
 
@@ -42,14 +39,16 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
 
-        .logoHeader{
+        .logoHeader {
             width: 150px;
-            a{
+
+            a {
                 display: block;
                 width: 100%;
 
-                img{
+                img {
                     object-fit: contain;
                     width: 100%;
                 }
@@ -60,6 +59,8 @@ header {
             height: 100%;
             display: flex;
             align-items: center;
+            text-transform: uppercase;
+
 
             .actual {
                 color: $colorPrincipal1;
@@ -218,10 +219,102 @@ header {
             }
 
         }
+
+        .contenedorCategorias {
+            @extend .sombra;
+            background: #fff;
+            height: 380px;
+            width: 1000px;
+            position: absolute;
+            z-index: 1000;
+            top: 60px;
+            right: 150px;
+            border-radius: 5px;
+            padding: 0 10px;
+            display: none;
+
+            .listaCategorias {
+                background: #fff;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: nowrap;
+
+                .categorias {
+                    max-width: 166px;
+                    margin: 10px 0;
+
+                    .aCategorias {
+                        padding: 5px;
+                        color: $letrasOscuras;
+                        font-weight: 600;
+                        text-transform: uppercase;
+
+                        &:hover {
+                            color: $colorPrincipal1
+                        }
+                    }
+
+                    .listaSubcategorias {
+                        padding: 10px;
+                        height: 335px;
+                        overflow: auto;
+
+                        li {
+                            margin: 0 0 10px 0;
+
+                            a {
+                                color: #949494;
+                                border-bottom: 2px solid transparent;
+
+
+                                &:hover {
+                                    color: $letrasOscuras;
+                                    border-bottom: 2px solid $colorPrincipal1;
+                                }
+                            }
+                        }
+
+                        &:hover::-webkit-scrollbar-thumb{
+                            background: #dfdfdf;
+                        }
+                        &::-webkit-scrollbar {
+                            width: 8px;
+                            height: 8px;
+                        }
+
+                        &::-webkit-scrollbar-track {
+                            background: #fff;
+                        }
+
+                        &::-webkit-scrollbar-thumb {
+                            background: #fff;
+                            border-radius: 10px;
+                            border: 1px solid #fff;
+                        }
+                    }
+                }
+            }
+
+            &::-webkit-scrollbar {
+                width: 8px;
+                height: 8px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: #fff;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: #dfdfdf;
+                border-radius: 10px;
+                border: 1px solid #fff;
+            }
+        }
     }
 }
 
 footer {
+    margin-top: 120px;
     width: 100%;
     padding: 20px 0;
     background: $colorPrincipal2;
@@ -260,12 +353,12 @@ footer {
             .logoFooter {
                 height: 50px;
                 width: 200px;
-                
-                a{
+
+                a {
                     display: block;
                     width: 100%;
-    
-                    img{
+
+                    img {
                         object-fit: contain;
                         width: 100%;
                     }
@@ -330,13 +423,12 @@ footer {
     }
 }
 
-
-
 .producto {
     display: inline-block;
     background: #fff;
     width: 240px;
     border-radius: 5px;
+    margin-bottom: 10px;
 
     .imgProducto {
         height: 220px;
@@ -372,7 +464,7 @@ footer {
         }
     }
 
-    &:hover{
+    &:hover {
         @extend .sombra;
     }
 }

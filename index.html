@@ -25,8 +25,7 @@
                 <nav>
                     <ul>
                         <li><a href="#" class="actual">Inicio</a></li>
-                        <li><a href="#">Categorías</a></li>
-                        <li><a href="./pag/explorar.html">Explorar</a></li>
+                        <li><a href="#" id="categorias">Categorías</a></li>
                         <ul class="opcionesNav">
                             <li id="lupa">
                                 <i class="fas fa-search"></i>
@@ -51,6 +50,90 @@
                     <div><a href="#">Ingresar</a></div>
                    <div><a href="#">Crear cuenta</a></div>
                 </div>
+            </div>
+            <div class="contenedorCategorias" id="contenedorCategorias">
+                <ul class="listaCategorias">
+                    <li class="categorias"><a href="/pag/carrito.html" class="aCategorias">Cocina</a>
+                        <ul class="listaSubcategorias">
+                            <li><a href="#">Aluminio y acero</a></li>
+                            <li><a href="#">Melamina</a></li>
+                            <li><a href="#">Teflón</a></li>
+                            <li><a href="#">Cerámica</a></li>
+                            <li><a href="#">Herméticos</a></li>
+                            <li><a href="#">Platos y compoteras</a></li>
+                            <li><a href="#">Vasos y copas</a></li>
+                            <li><a href="#">Jarras, jarros y tazas</a></li>
+                            <li><a href="#">Cubiertos</a></li>
+                            <li><a href="#">Utensillos</a></li>
+                            <li><a href="#">Bandejas, bowls y ensaladeras</a></li>
+                            <li><a href="#">Botellas y bidones</a></li>
+                            <li><a href="#">Tablas</a></li>
+                            <li><a href="#">Artículos de asador</a></li>
+                            <li><a href="#">Secaplatos y coladores</a></li>
+                            <li><a href="#">Repostería</a></li>
+                            <li><a href="#">Electrodomésticos</a></li>
+                            <li><a href="#">Infantiles</a></li>
+                            <li><a href="#">Rigolleau</a></li>
+                            <li><a href="#">Carol</a></li>
+                            <li><a href="#">Tramontina</a></li>
+                        </ul>
+                    </li>
+                    <li class="categorias"><a href="#" class="aCategorias">Regalería</a>
+                        <ul class="listaSubcategorias">
+                            <li><a href="#">Decoración</a></li>
+                            <li><a href="#">Portaretratos</a></li>
+                            <li><a href="#">Lámparas, velas y sahumerios</a></li>
+                            <li><a href="#">Flores y floreros</a></li>
+                            <li><a href="#">Bolsos, bolleteras y necesers</a></li>
+                        </ul>
+                    </li>
+                    <li class="categorias"><a href="#" class="aCategorias">Juguetería</a>
+                        <ul class="listaSubcategorias">
+                            <li><a href="#">Juegos de mesa</a></li>
+                            <li><a href="#">Didácticos</a></li>
+                            <li><a href="#">Verano</a></li>
+                            <li><a href="#">Vehiculos</a></li>
+                            <li><a href="#">Muñecas/os</a></li>
+                            <li><a href="#">Animales</a></li>
+                            <li><a href="#">Musicales</a></li>
+                            <li><a href="#">Pelotas</a></li>
+                        </ul>
+                    </li>
+                    <li class="categorias"><a href="#" class="aCategorias">Mates y termos</a>
+                        <ul class="listaSubcategorias">
+                            <li><a href="#">Mates</a></li>
+                            <li><a href="#">Termos</a></li>
+                            <li><a href="#">Equipos de mate</a></li>
+                            <li><a href="#">Bombillas</a></li>
+                            <li><a href="#">Vertedores</a></li>
+                            <li><a href="#">Portatermos</a></li>
+                            <li><a href="#">Repuestos</a></li>
+                            <li><a href="#">Pavas</a></li>
+                            <li><a href="#">Lumilagro</a></li>
+                        </ul>
+                    </li>
+                    <li class="categorias"><a href="#" class="aCategorias">Limpieza y baño</a>
+                        <ul class="listaSubcategorias">
+                            <li><a href="#">Alfombras</a></li>
+                            <li><a href="#">Limpieza casa</a></li>
+                            <li><a href="#">Limpieza personal</a></li>
+                            <li><a href="#">Baldes, fuentes y palanganas</a></li>
+                            <li><a href="#">Ropa</a></li>
+                            <li><a href="#">Cortinas</a></li>
+                            <li><a href="#">Baño</a></li>
+                        </ul>
+                    </li>
+                    <li class="categorias"><a href="#" class="aCategorias">Varios</a>
+                        <ul class="listaSubcategorias">
+                            <li><a href="#">Electrónica</a></li>
+                            <li><a href="#">Jardinería</a></li>
+                            <li><a href="#">Librería</a></li>
+                            <li><a href="#">Invierno</a></li>
+                            <li><a href="#">Camping</a></li>
+                            <li><a href="#">Organizadores</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </header>
@@ -237,8 +320,7 @@
             </a>
         </div>
     </section>
-    <footer>
-        
+    <footer>   
         <div class="footerCenter">
             <p class="infoFooter">
                 A pesar del máximo esfuerzo para actualizar los datos,
@@ -298,6 +380,19 @@
         },1)                 
 
         }
+
+        window.onclick = e => {
+            const contenedorCategorias = document.getElementById('contenedorCategorias')
+            const categorias = document.getElementById('categorias')
+
+            if(e.target.id == "categorias"){
+                categorias.className = "actual"
+                contenedorCategorias.style.display = "block";
+            }else{
+                contenedorCategorias.style.display = "none";
+                categorias.className = ""
+            }
+        };
 
 
 

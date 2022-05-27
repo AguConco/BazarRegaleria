@@ -1,0 +1,71 @@
+
+.sectionProductosCategorias{
+    width: 1300px;
+    margin: 80px auto 0;
+
+    h1{
+        color: $letrasOscuras;    
+        text-transform: uppercase;
+        font-size: 35px;
+        position: relative;
+        margin-bottom: 60px;
+
+        div{
+            @extend .detalleNaranja;
+        }
+    }
+
+    .contenedorPrincipalCategoria{
+
+        display: grid;
+        grid-template-columns: 300px auto;
+        grid-template-rows: auto;
+        grid-template-areas:"filtros productos";
+        gap: 10px;
+
+        .filtros{
+            grid-area: filtros;
+
+            div{
+                background: #fff;
+                border-radius: 5px;
+                width: 100%;
+                padding: 15px;
+                margin-bottom: 20px;
+
+                h2{
+                    font-size: 18px;
+                    color: $letrasOscuras;
+                    margin-bottom: 10px;
+                }
+
+                ul{         
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    li{
+                        padding: 3px 0;
+                        margin: 2px 0;
+                        color: $letrasOscuras;
+                        border-bottom: 2px solid transparent;
+                        cursor: pointer;
+                        
+                        &:hover{
+                            border-bottom: 2px solid $colorPrincipal1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .contenedorProductosCategoria{
+            grid-area: productos;
+            display: flex;
+            align-items: flex-start;
+            align-self: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+}

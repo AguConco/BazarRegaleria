@@ -33,7 +33,7 @@
       background: #d66140;
       color: #fff; }
 
-.detalleNaranja, .presentacion .presentacionGrid .categoriasGrid h2 div {
+.detalleNaranja, .presentacion .presentacionGrid .categoriasGrid h2 div, .sectionProductosCategorias h1 div {
   position: absolute;
   bottom: -5px;
   left: 0;
@@ -41,7 +41,7 @@
   width: 50px;
   background: #d66140; }
 
-.sombra, .producto:hover, .presentacion .presentacionGrid .categoriasGrid:hover {
+.sombra, header .headerCenter .contenedorCategorias, .producto:hover {
   box-shadow: 0 5px 15px #00000020; }
 
 .subtitulo, .sectionProductos h3, .sectionCarrito h3 {
@@ -74,7 +74,6 @@ body {
 header {
   width: 100%;
   border-bottom: 1px solid #00000020;
-  text-transform: uppercase;
   background: #fff;
   height: 70px; }
   header .headerCenter {
@@ -83,7 +82,8 @@ header {
     height: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    position: relative; }
     header .headerCenter .logoHeader {
       width: 150px; }
       header .headerCenter .logoHeader a {
@@ -95,7 +95,8 @@ header {
     header .headerCenter .headerNav {
       height: 100%;
       display: flex;
-      align-items: center; }
+      align-items: center;
+      text-transform: uppercase; }
       header .headerCenter .headerNav .actual {
         color: #d66140;
         fill: #d66140; }
@@ -195,8 +196,67 @@ header {
             header .headerCenter .headerNav .opcionesCuenta div:nth-child(2) a:hover {
               color: #d66140;
               background: #fff; }
+    header .headerCenter .contenedorCategorias {
+      background: #fff;
+      height: 380px;
+      width: 1000px;
+      position: absolute;
+      z-index: 1000;
+      top: 60px;
+      right: 150px;
+      border-radius: 5px;
+      padding: 0 10px;
+      display: none; }
+      header .headerCenter .contenedorCategorias .listaCategorias {
+        background: #fff;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap; }
+        header .headerCenter .contenedorCategorias .listaCategorias .categorias {
+          max-width: 166px;
+          margin: 10px 0; }
+          header .headerCenter .contenedorCategorias .listaCategorias .categorias .aCategorias {
+            padding: 5px;
+            color: #575758;
+            font-weight: 600;
+            text-transform: uppercase; }
+            header .headerCenter .contenedorCategorias .listaCategorias .categorias .aCategorias:hover {
+              color: #d66140; }
+          header .headerCenter .contenedorCategorias .listaCategorias .categorias .listaSubcategorias {
+            padding: 10px;
+            height: 335px;
+            overflow: auto; }
+            header .headerCenter .contenedorCategorias .listaCategorias .categorias .listaSubcategorias li {
+              margin: 0 0 10px 0; }
+              header .headerCenter .contenedorCategorias .listaCategorias .categorias .listaSubcategorias li a {
+                color: #949494;
+                border-bottom: 2px solid transparent; }
+                header .headerCenter .contenedorCategorias .listaCategorias .categorias .listaSubcategorias li a:hover {
+                  color: #575758;
+                  border-bottom: 2px solid #d66140; }
+            header .headerCenter .contenedorCategorias .listaCategorias .categorias .listaSubcategorias:hover::-webkit-scrollbar-thumb {
+              background: #dfdfdf; }
+            header .headerCenter .contenedorCategorias .listaCategorias .categorias .listaSubcategorias::-webkit-scrollbar {
+              width: 8px;
+              height: 8px; }
+            header .headerCenter .contenedorCategorias .listaCategorias .categorias .listaSubcategorias::-webkit-scrollbar-track {
+              background: #fff; }
+            header .headerCenter .contenedorCategorias .listaCategorias .categorias .listaSubcategorias::-webkit-scrollbar-thumb {
+              background: #fff;
+              border-radius: 10px;
+              border: 1px solid #fff; }
+      header .headerCenter .contenedorCategorias::-webkit-scrollbar {
+        width: 8px;
+        height: 8px; }
+      header .headerCenter .contenedorCategorias::-webkit-scrollbar-track {
+        background: #fff; }
+      header .headerCenter .contenedorCategorias::-webkit-scrollbar-thumb {
+        background: #dfdfdf;
+        border-radius: 10px;
+        border: 1px solid #fff; }
 
 footer {
+  margin-top: 120px;
   width: 100%;
   padding: 20px 0;
   background: #22222c; }
@@ -266,7 +326,8 @@ footer {
   display: inline-block;
   background: #fff;
   width: 240px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  margin-bottom: 10px; }
   .producto .imgProducto {
     height: 220px;
     width: 240px;
@@ -295,7 +356,7 @@ footer {
 /* Primera sección */
 .presentacion {
   width: 1300px;
-  margin: 0 auto 60px; }
+  margin: 60px auto 80px; }
   .presentacion h1 {
     text-transform: uppercase;
     text-align: center;
@@ -359,17 +420,16 @@ footer {
 /* Seccion productos */
 .sectionProductos {
   width: 1300px;
-  margin: 60px auto; }
+  margin: 0 auto; }
   .sectionProductos .contenedorProductos {
     display: flex;
     justify-content: space-between; }
 
 /* Seccion marcas */
 .sectionMarcas {
-  margin: 0 auto;
+  margin: 80px auto 90px;
   width: 1300px; }
   .sectionMarcas .divMarcas {
-    margin: 40px 0;
     border-radius: 5px;
     background: #fff;
     display: flex;
@@ -663,19 +723,12 @@ footer {
     width: 100%;
     background: #fff;
     border-radius: 5px;
-    padding: 50px 0; }
-    .sectionCarrito .carritoVacio p {
+    padding: 75px 0; }
+    .sectionCarrito .carritoVacio span {
+      display: block;
       font-size: 25px;
       color: #575758;
       text-align: center; }
-    .sectionCarrito .carritoVacio a {
-      margin-top: 10px;
-      display: block;
-      text-align: center;
-      color: #aaa;
-      font-weight: 300; }
-      .sectionCarrito .carritoVacio a:hover {
-        text-decoration: underline; }
 
 .sectionArrepentimiento {
   width: 1300px;
@@ -700,3 +753,50 @@ footer {
     padding: 10px; }
     .sectionArrepentimiento #btnArrepentimiento:hover {
       background: #00000015; }
+
+.sectionProductosCategorias {
+  width: 1300px;
+  margin: 80px auto 0; }
+  .sectionProductosCategorias h1 {
+    color: #575758;
+    text-transform: uppercase;
+    font-size: 35px;
+    position: relative;
+    margin-bottom: 60px; }
+  .sectionProductosCategorias .contenedorPrincipalCategoria {
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-template-rows: auto;
+    grid-template-areas: "filtros productos";
+    gap: 10px; }
+    .sectionProductosCategorias .contenedorPrincipalCategoria .filtros {
+      grid-area: filtros; }
+      .sectionProductosCategorias .contenedorPrincipalCategoria .filtros div {
+        background: #fff;
+        border-radius: 5px;
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 20px; }
+        .sectionProductosCategorias .contenedorPrincipalCategoria .filtros div h2 {
+          font-size: 18px;
+          color: #575758;
+          margin-bottom: 10px; }
+        .sectionProductosCategorias .contenedorPrincipalCategoria .filtros div ul {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start; }
+          .sectionProductosCategorias .contenedorPrincipalCategoria .filtros div ul li {
+            padding: 3px 0;
+            margin: 2px 0;
+            color: #575758;
+            border-bottom: 2px solid transparent;
+            cursor: pointer; }
+            .sectionProductosCategorias .contenedorPrincipalCategoria .filtros div ul li:hover {
+              border-bottom: 2px solid #d66140; }
+    .sectionProductosCategorias .contenedorPrincipalCategoria .contenedorProductosCategoria {
+      grid-area: productos;
+      display: flex;
+      align-items: flex-start;
+      align-self: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap; }
