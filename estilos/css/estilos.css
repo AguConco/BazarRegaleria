@@ -33,7 +33,7 @@
       background: #d66140;
       color: #fff; }
 
-.detalleNaranja, .presentacion .presentacionGrid .categoriasGrid h2 div, .sectionProductosCategorias h1 div {
+.detalleNaranja, .presentacion .presentacionGrid .categoriasGrid h2 div {
   position: absolute;
   bottom: -5px;
   left: 0;
@@ -781,18 +781,24 @@ footer {
           font-size: 18px;
           color: #575758;
           margin-bottom: 10px; }
-        .sectionProductosCategorias .contenedorPrincipalCategoria .filtros div ul {
+        .sectionProductosCategorias .contenedorPrincipalCategoria .filtros div ul li {
+          padding: 5px;
+          color: #575758;
+          border-bottom: 2px solid transparent;
+          cursor: pointer;
+          border-radius: 5px;
           display: flex;
-          flex-direction: column;
-          align-items: flex-start; }
-          .sectionProductosCategorias .contenedorPrincipalCategoria .filtros div ul li {
-            padding: 3px 0;
-            margin: 2px 0;
-            color: #575758;
-            border-bottom: 2px solid transparent;
-            cursor: pointer; }
-            .sectionProductosCategorias .contenedorPrincipalCategoria .filtros div ul li:hover {
-              border-bottom: 2px solid #d66140; }
+          justify-content: space-between;
+          align-items: center; }
+          .sectionProductosCategorias .contenedorPrincipalCategoria .filtros div ul li i {
+            font-size: 14px;
+            position: relative;
+            padding: 2px 2px 0 0;
+            color: #cecece; }
+          .sectionProductosCategorias .contenedorPrincipalCategoria .filtros div ul li .fa-dot-circle {
+            color: #d66140; }
+          .sectionProductosCategorias .contenedorPrincipalCategoria .filtros div ul li:hover {
+            background: #00000010; }
     .sectionProductosCategorias .contenedorPrincipalCategoria .contenedorProductosCategoria {
       grid-area: productos;
       display: flex;
@@ -800,3 +806,57 @@ footer {
       align-self: flex-start;
       justify-content: space-between;
       flex-wrap: wrap; }
+
+.sectionAyuda {
+  width: 1300px;
+  margin: 80px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .sectionAyuda h1 {
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    color: #575758;
+    width: 100%; }
+  .sectionAyuda .contenedorAyuda {
+    border-radius: 5px;
+    border: 1px solid transparent;
+    margin: 0 0 5px 0;
+    width: 400px;
+    background: #fff;
+    color: #575758;
+    padding: 15px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .sectionAyuda .contenedorAyuda h3 {
+      font-weight: 300;
+      font-size: 18px;
+      text-transform: uppercase; }
+    .sectionAyuda .contenedorAyuda i:nth-child(2) {
+      font-size: 18px;
+      -webkit-text-stroke: 1px #fff;
+      position: relative;
+      left: -10px;
+      transition: .3s;
+      opacity: .5; }
+    .sectionAyuda .contenedorAyuda:hover {
+      border-bottom: 1px solid #d66140; }
+      .sectionAyuda .contenedorAyuda:hover i {
+        left: 0;
+        opacity: 1; }
+      .sectionAyuda .contenedorAyuda:hover h3 {
+        color: #d66140; }
+  .sectionAyuda .respuestaAyuda {
+    width: 890px;
+    height: auto;
+    background: #fff;
+    border-radius: 5px; }
+    .sectionAyuda .respuestaAyuda span {
+      display: block;
+      text-align: center;
+      font-size: 20px;
+      color: #cecece;
+      padding-top: 100px; }

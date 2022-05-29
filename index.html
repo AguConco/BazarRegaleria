@@ -348,12 +348,11 @@
                 <div class="redireccionesAyuda">
                     <h3>Ayuda</h3>
                     <ul>
-                        <li><a href="#">Contacto</a></li>
                         <li><a href="#">Ayuda</a></li>
                     </ul>
                 </div>     
                 <div class="redireccionesRedes">
-                    <h3>Redes</h3>
+                    <h3>contacto</h3>
                     <ul>
                         <li><a href="https://web.whatsapp.com/send?text=Hola!&amp;phone=+543492575002" target="new"><i class="fab fa-whatsapp"></i></a>    </li>
                         <li><a href="https://www.instagram.com/bazar_regaleria/" target="new"><i class="fab fa-instagram"></i></a></li>
@@ -385,7 +384,11 @@
             const contenedorCategorias = document.getElementById('contenedorCategorias')
             const categorias = document.getElementById('categorias')
 
-            if(e.target.id == "categorias"){
+            if(e.target.id == "categorias" 
+            || e.target.parentNode.className == "categorias" 
+            || e.target.parentNode.id == "contenedorCategorias" 
+            || e.target.parentNode.className == "listaSubcategorias" 
+            || e.target.parentNode.className == "listaCategorias"){
                 categorias.className = "actual"
                 contenedorCategorias.style.display = "block";
             }else{

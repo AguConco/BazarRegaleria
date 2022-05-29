@@ -1,0 +1,76 @@
+.sectionAyuda {
+    width: 1300px;
+    margin: 80px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+    h1 {
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        color: $letrasOscuras;
+        width: 100%;
+    }
+
+    .contenedorAyuda {
+        border-radius: 5px;
+        border: 1px solid transparent;
+        margin: 0 0 5px 0; // ver si cambiar a auto
+        width: 400px;
+        background: #fff;
+        color: $letrasOscuras;
+        padding: 15px;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h3 {
+            font-weight: 300;
+            font-size: 18px;
+            text-transform: uppercase;
+
+        }
+
+        i:nth-child(2) {
+            font-size: 18px;
+            -webkit-text-stroke: 1px #fff;
+            position: relative;
+            left: -10px;
+            transition: .3s;
+            opacity: .5;
+        }
+
+        &:hover {
+            border-bottom: 1px solid $colorPrincipal1;
+
+            i {
+                left: 0;
+                opacity: 1;
+            }
+
+            h3 {
+                color: $colorPrincipal1;
+            }
+
+        }
+    }
+
+    .respuestaAyuda {
+        width: 890px;
+        height: auto;
+        background: #fff;
+        border-radius: 5px;
+
+        span{
+            display: block;
+            text-align: center;
+            font-size: 20px;
+            color: $letrasClaras;
+            padding-top: 100px;
+        }
+    }
+
+}
