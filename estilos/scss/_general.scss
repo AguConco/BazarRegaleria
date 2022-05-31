@@ -196,13 +196,8 @@ header {
 
                     a {
                         display: block;
-                        color: $colorPrincipal1;
-                        padding: 5px 10px;
-                        border-radius: 5px;
-
-                        &:hover {
-                            background: #00000010;
-                        }
+                        @include btnSitio(3);
+                        position: relative;
                     }
 
                     &:nth-child(2) {

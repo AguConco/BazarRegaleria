@@ -49,8 +49,7 @@
 
                      div {
                          a {
-                             font-size: 14px;
-                             border: 1px solid $colorPrincipal1;
+                             font-size: 15px;
                          }
 
                      }
@@ -187,13 +186,6 @@
                     order: 1;
                     margin-left: 0;
                     padding: 20px 0;
-                    div {
-                        a {
- 
-                            border: 1px solid $colorPrincipal1;
-
-                        }
-                    }
     
                 }
     
@@ -272,113 +264,51 @@
         }
     }
     
-    footer {
-        margin-top: 120px;
-        width: 100%;
-        padding: 20px 0;
-        background: $colorPrincipal2;
-    
+    footer {    
         .footerCenter {
-            width: 1300px;
-            margin: auto;
-    
+            width: 95%;    
     
             .infoFooter {
-                display: inline-block;
-                width: 80%;
-                text-align: center;
-                margin: 30px 10%;
-                color: $letrasClaras;
-                font-size: 15px;
-    
+                width: 100%;
+                margin:  30px 0;
             }
     
             .redirecciones {
-                margin: 30px 0;
-                display: flex;
-                justify-content: space-evenly;
-    
-                h3 {
-                    display: inline-block;
-                    color: $letrasClaras;
-                    padding-bottom: 10px;
-                    margin-bottom: 10px;
-                    border-bottom: .5px solid #3d3d3d;
-                    font-weight: 400;
-                    font-size: 18px;
-                    text-transform: uppercase;
-                }
-    
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-items: center;
+
                 .logoFooter {
-                    height: 50px;
-                    width: 200px;
-    
+                    margin: 0 190px 40px;
+
                     a {
                         display: block;
                         width: 100%;
-    
+
                         img {
                             object-fit: contain;
                             width: 100%;
                         }
                     }
                 }
-    
-    
+
+
                 .redireccionesCategorias,
-                .redireccionesAyuda {
-                    li {
-                        margin: 5px 0;
-    
-                        a {
-                            color: #aaa;
-    
-                            &:hover {
-                                color: #fff;
-                            }
-                        }
-                    }
-                }
-    
+                .redireccionesAyuda,
                 .redireccionesRedes {
-    
-                    ul {
-                        display: flex;
-    
-                        li {
-                            margin: 0 5px;
-    
-                            a {
-                                display: flex;
-                                height: 35px;
-                                width: 35px;
-                                justify-content: center;
-                                align-items: center;
-                                border-radius: 50%;
-                                border: 1px solid #aaa;
-    
-                                i {
-                                    color: #aaa;
-                                    font-size: 18px;
-    
-                                }
-    
-                                &:hover {
-                                    background: #fff;
-                                    border: 1px solid #fff;
-    
-                                    i {
-                                        color: $colorPrincipal2;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-    
+                    text-align: center;
+                   h3{
+                       width: 200px;
+                       margin-top: 20px;
+                   }
+               }
+
+               .redireccionesRedes{
+                   ul{
+                       justify-content: space-around;
+                   }
+               }
             }
-    
-    
         }
     }
     

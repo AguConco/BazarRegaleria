@@ -180,11 +180,16 @@ header {
           margin: 0 5px; }
           header .headerCenter .headerNav .opcionesCuenta div a {
             display: block;
-            color: #d66140;
             padding: 5px 10px;
-            border-radius: 5px; }
+            border-radius: 5px;
+            position: absolute;
+            border: 1px solid #d66140;
+            border: 1px solid transparent;
+            color: #d66140;
+            background: #00000010;
+            position: relative; }
             header .headerCenter .headerNav .opcionesCuenta div a:hover {
-              background: #00000010; }
+              background: #00000015; }
           header .headerCenter .headerNav .opcionesCuenta div:nth-child(2) a {
             padding: 5px 10px;
             border-radius: 5px;
@@ -888,8 +893,7 @@ footer {
           top: 15px;
           right: 0; }
           header .headerCenter .headerNav .opcionesCuenta div a {
-            font-size: 14px;
-            border: 1px solid #d66140; }
+            font-size: 15px; }
       header .headerCenter .contenedorCategorias {
         width: 580px;
         top: 105px;
@@ -967,8 +971,6 @@ footer {
           order: 1;
           margin-left: 0;
           padding: 20px 0; }
-          header .headerCenter .headerNav .opcionesCuenta div a {
-            border: 1px solid #d66140; }
       header .headerCenter .menuBarras {
         border-radius: 5px;
         padding: 5px;
@@ -1016,69 +1018,31 @@ footer {
               text-align: center; }
             header .headerCenter .contenedorCategorias .listaCategorias .categorias .listaSubcategorias {
               display: none; }
-  footer {
-    margin-top: 120px;
-    width: 100%;
-    padding: 20px 0;
-    background: #22222c; }
-    footer .footerCenter {
-      width: 1300px;
-      margin: auto; }
-      footer .footerCenter .infoFooter {
-        display: inline-block;
-        width: 80%;
-        text-align: center;
-        margin: 30px 10%;
-        color: #cecece;
-        font-size: 15px; }
-      footer .footerCenter .redirecciones {
-        margin: 30px 0;
-        display: flex;
-        justify-content: space-evenly; }
-        footer .footerCenter .redirecciones h3 {
-          display: inline-block;
-          color: #cecece;
-          padding-bottom: 10px;
-          margin-bottom: 10px;
-          border-bottom: .5px solid #3d3d3d;
-          font-weight: 400;
-          font-size: 18px;
-          text-transform: uppercase; }
-        footer .footerCenter .redirecciones .logoFooter {
-          height: 50px;
-          width: 200px; }
-          footer .footerCenter .redirecciones .logoFooter a {
-            display: block;
+  footer .footerCenter {
+    width: 95%; }
+    footer .footerCenter .infoFooter {
+      width: 100%;
+      margin: 30px 0; }
+    footer .footerCenter .redirecciones {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center; }
+      footer .footerCenter .redirecciones .logoFooter {
+        margin: 0 190px 40px; }
+        footer .footerCenter .redirecciones .logoFooter a {
+          display: block;
+          width: 100%; }
+          footer .footerCenter .redirecciones .logoFooter a img {
+            object-fit: contain;
             width: 100%; }
-            footer .footerCenter .redirecciones .logoFooter a img {
-              object-fit: contain;
-              width: 100%; }
-        footer .footerCenter .redirecciones .redireccionesCategorias li,
-        footer .footerCenter .redirecciones .redireccionesAyuda li {
-          margin: 5px 0; }
-          footer .footerCenter .redirecciones .redireccionesCategorias li a,
-          footer .footerCenter .redirecciones .redireccionesAyuda li a {
-            color: #aaa; }
-            footer .footerCenter .redirecciones .redireccionesCategorias li a:hover,
-            footer .footerCenter .redirecciones .redireccionesAyuda li a:hover {
-              color: #fff; }
-        footer .footerCenter .redirecciones .redireccionesRedes ul {
-          display: flex; }
-          footer .footerCenter .redirecciones .redireccionesRedes ul li {
-            margin: 0 5px; }
-            footer .footerCenter .redirecciones .redireccionesRedes ul li a {
-              display: flex;
-              height: 35px;
-              width: 35px;
-              justify-content: center;
-              align-items: center;
-              border-radius: 50%;
-              border: 1px solid #aaa; }
-              footer .footerCenter .redirecciones .redireccionesRedes ul li a i {
-                color: #aaa;
-                font-size: 18px; }
-              footer .footerCenter .redirecciones .redireccionesRedes ul li a:hover {
-                background: #fff;
-                border: 1px solid #fff; }
-                footer .footerCenter .redirecciones .redireccionesRedes ul li a:hover i {
-                  color: #22222c; } }
+      footer .footerCenter .redirecciones .redireccionesCategorias,
+      footer .footerCenter .redirecciones .redireccionesAyuda,
+      footer .footerCenter .redirecciones .redireccionesRedes {
+        text-align: center; }
+        footer .footerCenter .redirecciones .redireccionesCategorias h3,
+        footer .footerCenter .redirecciones .redireccionesAyuda h3,
+        footer .footerCenter .redirecciones .redireccionesRedes h3 {
+          width: 200px;
+          margin-top: 20px; }
+      footer .footerCenter .redirecciones .redireccionesRedes ul {
+        justify-content: space-around; } }
