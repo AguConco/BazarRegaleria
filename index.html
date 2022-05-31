@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +14,7 @@
     <script src="./scripts/font-awesome.js"></script>
 
 </head>
+
 <body>
     <header>
         <div class="headerCenter">
@@ -33,8 +35,11 @@
                             </li>
                             <li>
                                 <a href="./pag/carrito.html" id="carrito">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#575758" class="bi bi-cart"  viewBox="0 0 16 16">
-                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#575758"
+                                        class="bi bi-cart" viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z">
+                                        </path>
                                     </svg>
                                     <span>Carrito</span>
                                 </a>
@@ -44,12 +49,16 @@
                                 <span>Cuenta</span>
                             </li>
                         </ul>
-                    </ul>   
+                    </ul>
                 </nav>
                 <div class="opcionesCuenta">
                     <div><a href="#">Ingresar</a></div>
-                   <div><a href="#">Crear cuenta</a></div>
+                    <div><a href="#">Crear cuenta</a></div>
                 </div>
+            </div>
+            <div class="menuBarras" id="menu">
+                <i class="fas fa-bars"></i>
+                <span>Menú</span>
             </div>
             <div class="contenedorCategorias" id="contenedorCategorias">
                 <ul class="listaCategorias">
@@ -320,7 +329,7 @@
             </a>
         </div>
     </section>
-    <footer>   
+    <footer>
         <div class="footerCenter">
             <p class="infoFooter">
                 A pesar del máximo esfuerzo para actualizar los datos,
@@ -344,23 +353,26 @@
                         <li><a href="#">Limpieza y baño</a></li>
                         <li><a href="#">Varios</a></li>
                     </ul>
-                </div> 
+                </div>
                 <div class="redireccionesAyuda">
                     <h3>Ayuda</h3>
                     <ul>
                         <li><a href="#">Ayuda</a></li>
                     </ul>
-                </div>     
+                </div>
                 <div class="redireccionesRedes">
                     <h3>contacto</h3>
                     <ul>
-                        <li><a href="https://web.whatsapp.com/send?text=Hola!&amp;phone=+543492575002" target="new"><i class="fab fa-whatsapp"></i></a>    </li>
-                        <li><a href="https://www.instagram.com/bazar_regaleria/" target="new"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="https://www.facebook.com/bazar.regaleriaa/" target="new"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://web.whatsapp.com/send?text=Hola!&amp;phone=+543492575002" target="new"><i
+                                    class="fab fa-whatsapp"></i></a> </li>
+                        <li><a href="https://www.instagram.com/bazar_regaleria/" target="new"><i
+                                    class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.facebook.com/bazar.regaleriaa/" target="new"><i
+                                    class="fab fa-facebook-f"></i></a></li>
                         <li><a href="mailto:bazarregaleriarafaela@gmail.com"><i class="far fa-envelope"></i></a></li>
                     </ul>
-                </div>              
-            </div>  
+                </div>
+            </div>
         </div>
     </footer>
 
@@ -368,37 +380,79 @@
         let numeros = document.querySelectorAll('.spanNum');
         let i = 0;
 
-        for(let l = 0; l < numeros.length; l++){
-            setInterval(()=>{
-            i++;
+        for (let l = 0; l < numeros.length; l++) {
+            setInterval(() => {
+                i++;
 
-            if(i <= 187){
-                
-                numeros[l].innerHTML = i;
-            }
-        },1)                 
+                if (i <= 187) {
 
+                    numeros[l].innerHTML = i;
+                }
+            }, 1)
         }
+
+        let estadoCategoria = 0
+        let estadoMenu = 0
 
         window.onclick = e => {
             const contenedorCategorias = document.getElementById('contenedorCategorias')
             const categorias = document.getElementById('categorias')
 
-            if(e.target.id == "categorias" 
-            || e.target.parentNode.className == "categorias" 
-            || e.target.parentNode.id == "contenedorCategorias" 
-            || e.target.parentNode.className == "listaSubcategorias" 
-            || e.target.parentNode.className == "listaCategorias"){
-                categorias.className = "actual"
-                contenedorCategorias.style.display = "block";
-            }else{
-                contenedorCategorias.style.display = "none";
+            if (e.target.id == "categorias"
+                || e.target.parentNode.className == "categorias"
+                || e.target.parentNode.id == "contenedorCategorias"
+                || e.target.parentNode.className == "listaSubcategorias"
+                || e.target.parentNode.className == "listaCategorias") {
+
+                if (estadoCategoria == 1 && e.target.id == "categorias") {
+                    cerrar()
+                }
+                if (estadoCategoria == 0) {
+                    categorias.className = "actual"
+                    contenedorCategorias.style.display = "block"
+                }
+                if (e.target.id == "categorias") {
+                    estadoCategoria = !estadoCategoria
+                }
+            } else {
+                cerrar()
+                estadoCategoria = 0
+            }
+
+            function cerrar() {
+                contenedorCategorias.style.display = "none"
                 categorias.className = ""
             }
-        };
+
+            const contenedorMenu = document.getElementsByClassName('headerNav')
+            const opcionesNav = document.getElementsByClassName('opcionesNav')
+
+            if (e.target.id == "menu"
+                || e.target.className == "headerNav"
+                || e.target.id == "categorias") {
+
+                if (estadoMenu == 1 && e.target.id == "menu") {
+                    contenedorMenu[0].style.left = "100%"
+                    opcionesNav[0].style.right = "calc(100% + 44px)" 
+                }
+                if(estadoMenu == 0){
+                    contenedorMenu[0].style.left = "0"
+                    opcionesNav[0].style.right = "44px"
+                }
+
+                if(e.target.id == "menu"){
+                    estadoMenu = !estadoMenu
+                }
+            } else {
+                contenedorMenu[0].style.left = "100%"
+                opcionesNav[0].style.right = "calc(100% + 44px)" 
+                estadoMenu = 0
+            }
+        }
 
 
 
     </script>
 </body>
+
 </html>

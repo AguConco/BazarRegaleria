@@ -44,7 +44,7 @@
 .sombra, header .headerCenter .contenedorCategorias, .producto:hover {
   box-shadow: 0 5px 15px #00000020; }
 
-.subtitulo, .sectionProductos h3, .sectionCarrito h3 {
+.subtitulo, .sectionProductos h3, .sectionCarrito h3, .sectionAyuda h1 {
   color: #575758;
   margin: 0 0 40px 0;
   font-size: 20px;
@@ -196,6 +196,8 @@ header {
             header .headerCenter .headerNav .opcionesCuenta div:nth-child(2) a:hover {
               color: #d66140;
               background: #fff; }
+    header .headerCenter .menuBarras {
+      display: none; }
     header .headerCenter .contenedorCategorias {
       background: #fff;
       height: 380px;
@@ -205,7 +207,7 @@ header {
       top: 60px;
       right: 150px;
       border-radius: 5px;
-      padding: 0 10px;
+      padding: 5px 10px;
       display: none; }
       header .headerCenter .contenedorCategorias .listaCategorias {
         background: #fff;
@@ -814,9 +816,7 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between; }
   .sectionAyuda h1 {
-    text-transform: uppercase;
-    margin-bottom: 40px;
-    color: #575758;
+    font-size: 24px;
     width: 100%; }
   .sectionAyuda .contenedorAyuda {
     border-radius: 5px;
@@ -860,3 +860,225 @@ footer {
       font-size: 20px;
       color: #cecece;
       padding-top: 100px; }
+
+@media all and (max-width: 1350px) {
+  header .headerCenter {
+    width: 960px; }
+    header .headerCenter .contenedorCategorias {
+      width: 960px;
+      right: 0px; }
+  footer .footerCenter {
+    width: 960px; } }
+
+@media all and (min-width: 599px) and (max-width: 1000px) {
+  header {
+    padding-top: 15px;
+    height: 125px; }
+    header .headerCenter {
+      width: 580px;
+      flex-direction: column;
+      align-items: flex-start; }
+      header .headerCenter .logoHeader {
+        margin-bottom: 10px; }
+      header .headerCenter .headerNav {
+        justify-content: end;
+        width: 100%; }
+        header .headerCenter .headerNav .opcionesCuenta {
+          position: absolute;
+          top: 15px;
+          right: 0; }
+          header .headerCenter .headerNav .opcionesCuenta div a {
+            font-size: 14px;
+            border: 1px solid #d66140; }
+      header .headerCenter .contenedorCategorias {
+        width: 580px;
+        top: 105px;
+        right: 0;
+        overflow-x: auto;
+        overflow-y: hidden; }
+        header .headerCenter .contenedorCategorias .listaCategorias .categorias {
+          min-width: 166px; }
+  footer .footerCenter {
+    width: 580px; }
+    footer .footerCenter .infoFooter {
+      width: 100%;
+      margin: 30px 0; }
+    footer .footerCenter .redirecciones {
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      footer .footerCenter .redirecciones .logoFooter {
+        margin: 0 190px 60px; }
+        footer .footerCenter .redirecciones .logoFooter a {
+          display: block;
+          width: 100%; }
+          footer .footerCenter .redirecciones .logoFooter a img {
+            object-fit: contain;
+            width: 100%; }
+      footer .footerCenter .redirecciones .redireccionesCategorias h3,
+      footer .footerCenter .redirecciones .redireccionesAyuda h3,
+      footer .footerCenter .redirecciones .redireccionesRedes h3 {
+        width: 100%; } }
+
+@media all and (max-width: 599px) {
+  header {
+    height: 70px; }
+    header .headerCenter {
+      width: 100%;
+      padding: 0 2.5%; }
+      header .headerCenter .logoHeader {
+        width: 120px; }
+      header .headerCenter .headerNav {
+        background: #fff;
+        position: absolute;
+        top: 70px;
+        left: 100%;
+        width: 100%;
+        flex-wrap: wrap;
+        height: auto;
+        justify-content: center;
+        box-shadow: 0 10px 15px #00000020;
+        z-index: 100; }
+        header .headerCenter .headerNav nav {
+          order: 2;
+          width: 100%;
+          padding-bottom: 10px; }
+          header .headerCenter .headerNav nav ul {
+            display: block;
+            width: 95%;
+            align-items: center; }
+            header .headerCenter .headerNav nav ul li {
+              display: block;
+              width: 100%;
+              margin: 3px 0; }
+              header .headerCenter .headerNav nav ul li a {
+                display: block;
+                width: 100%; }
+          header .headerCenter .headerNav nav .opcionesNav {
+            position: absolute;
+            top: -50px;
+            right: calc(100% + 44px);
+            display: flex;
+            width: 70px; }
+            header .headerCenter .headerNav nav .opcionesNav #lupa {
+              display: flex;
+              align-items: center;
+              width: 29px; }
+        header .headerCenter .headerNav .opcionesCuenta {
+          order: 1;
+          margin-left: 0;
+          padding: 20px 0; }
+          header .headerCenter .headerNav .opcionesCuenta div a {
+            border: 1px solid #d66140; }
+      header .headerCenter .menuBarras {
+        border-radius: 5px;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 29px;
+        height: 30px;
+        cursor: pointer;
+        position: relative;
+        z-index: 200; }
+        header .headerCenter .menuBarras i {
+          font-size: 18px;
+          color: #575758;
+          pointer-events: none; }
+        header .headerCenter .menuBarras span {
+          position: absolute;
+          top: 35px;
+          display: none;
+          color: #fff;
+          background: #00000060;
+          border-radius: 5px;
+          padding: 3px 5px;
+          text-transform: uppercase;
+          font-size: 14px; }
+        header .headerCenter .menuBarras:hover {
+          background: #00000010; }
+          header .headerCenter .menuBarras:hover i {
+            color: #d66140; }
+          header .headerCenter .menuBarras:hover span {
+            display: block; }
+      header .headerCenter .contenedorCategorias {
+        background: #fff;
+        height: auto;
+        width: 100%;
+        z-index: 1000;
+        top: 207px;
+        box-shadow: 0 10px 15px #00000010; }
+        header .headerCenter .contenedorCategorias .listaCategorias {
+          display: block; }
+          header .headerCenter .contenedorCategorias .listaCategorias .categorias {
+            max-width: none; }
+            header .headerCenter .contenedorCategorias .listaCategorias .categorias .aCategorias {
+              display: block;
+              text-align: center; }
+            header .headerCenter .contenedorCategorias .listaCategorias .categorias .listaSubcategorias {
+              display: none; }
+  footer {
+    margin-top: 120px;
+    width: 100%;
+    padding: 20px 0;
+    background: #22222c; }
+    footer .footerCenter {
+      width: 1300px;
+      margin: auto; }
+      footer .footerCenter .infoFooter {
+        display: inline-block;
+        width: 80%;
+        text-align: center;
+        margin: 30px 10%;
+        color: #cecece;
+        font-size: 15px; }
+      footer .footerCenter .redirecciones {
+        margin: 30px 0;
+        display: flex;
+        justify-content: space-evenly; }
+        footer .footerCenter .redirecciones h3 {
+          display: inline-block;
+          color: #cecece;
+          padding-bottom: 10px;
+          margin-bottom: 10px;
+          border-bottom: .5px solid #3d3d3d;
+          font-weight: 400;
+          font-size: 18px;
+          text-transform: uppercase; }
+        footer .footerCenter .redirecciones .logoFooter {
+          height: 50px;
+          width: 200px; }
+          footer .footerCenter .redirecciones .logoFooter a {
+            display: block;
+            width: 100%; }
+            footer .footerCenter .redirecciones .logoFooter a img {
+              object-fit: contain;
+              width: 100%; }
+        footer .footerCenter .redirecciones .redireccionesCategorias li,
+        footer .footerCenter .redirecciones .redireccionesAyuda li {
+          margin: 5px 0; }
+          footer .footerCenter .redirecciones .redireccionesCategorias li a,
+          footer .footerCenter .redirecciones .redireccionesAyuda li a {
+            color: #aaa; }
+            footer .footerCenter .redirecciones .redireccionesCategorias li a:hover,
+            footer .footerCenter .redirecciones .redireccionesAyuda li a:hover {
+              color: #fff; }
+        footer .footerCenter .redirecciones .redireccionesRedes ul {
+          display: flex; }
+          footer .footerCenter .redirecciones .redireccionesRedes ul li {
+            margin: 0 5px; }
+            footer .footerCenter .redirecciones .redireccionesRedes ul li a {
+              display: flex;
+              height: 35px;
+              width: 35px;
+              justify-content: center;
+              align-items: center;
+              border-radius: 50%;
+              border: 1px solid #aaa; }
+              footer .footerCenter .redirecciones .redireccionesRedes ul li a i {
+                color: #aaa;
+                font-size: 18px; }
+              footer .footerCenter .redirecciones .redireccionesRedes ul li a:hover {
+                background: #fff;
+                border: 1px solid #fff; }
+                footer .footerCenter .redirecciones .redireccionesRedes ul li a:hover i {
+                  color: #22222c; } }

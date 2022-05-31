@@ -220,6 +220,10 @@ header {
 
         }
 
+        .menuBarras{
+            display: none
+        }
+
         .contenedorCategorias {
             @extend .sombra;
             background: #fff;
@@ -230,7 +234,7 @@ header {
             top: 60px;
             right: 150px;
             border-radius: 5px;
-            padding: 0 10px;
+            padding: 5px 10px;
             display: none;
 
             .listaCategorias {
