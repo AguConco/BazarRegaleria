@@ -954,7 +954,7 @@ footer {
         background: #fff;
         position: absolute;
         top: 70px;
-        left: 100%;
+        left: 200%;
         width: 100%;
         flex-wrap: wrap;
         height: auto;
@@ -979,7 +979,7 @@ footer {
           header .headerCenter .headerNav nav .opcionesNav {
             position: absolute;
             top: -50px;
-            right: calc(100% + 44px);
+            right: calc(200% + 44px);
             display: flex;
             width: 70px; }
             header .headerCenter .headerNav nav .opcionesNav #lupa {
@@ -1170,3 +1170,57 @@ footer {
       .sectionMarcas .divMarcas .c3 {
         right: -80px;
         top: 70px; } }
+
+@media all and (max-width: 599px) {
+  .presentacion {
+    width: 95%; }
+    .presentacion .presentacionGrid {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(5, 180px);
+      grid-template-areas: "cocina"  "regaleria" "mate" "baño"  "juguete"; }
+      .presentacion .presentacionGrid .categoriasGrid {
+        padding: 15px; }
+        .presentacion .presentacionGrid .categoriasGrid .categoriaGridInfo a {
+          font-size: 18px;
+          left: 15px;
+          bottom: 15px; }
+        .presentacion .presentacionGrid .categoriasGrid .categoriaGridInfo .contenedorSpan .spanNum {
+          font-size: 22px;
+          display: block; }
+        .presentacion .presentacionGrid .categoriasGrid .categoriaGridInfo .contenedorSpan .spanProduct {
+          font-size: 18px;
+          display: block; }
+      .presentacion .presentacionGrid .g1 img {
+        width: 200px;
+        top: 45px; }
+      .presentacion .presentacionGrid .g2 img {
+        width: 200px;
+        top: -30px;
+        right: -20px; }
+      .presentacion .presentacionGrid .g3 img {
+        width: 160px;
+        top: 20px; }
+      .presentacion .presentacionGrid .g4 img {
+        top: 65px; }
+      .presentacion .presentacionGrid .g5 img {
+        width: 250px;
+        top: 20px;
+        right: -25px; }
+  .sectionProductos {
+    width: 95%; }
+  .sectionMarcas {
+    width: 95%; }
+    .sectionMarcas .divMarcas {
+      flex-wrap: wrap; }
+      .sectionMarcas .divMarcas h3 {
+        padding-top: 25px; }
+      .sectionMarcas .divMarcas .contenedorMarcas {
+        width: 80%;
+        margin: auto;
+        flex-wrap: wrap;
+        justify-content: center; }
+        .sectionMarcas .divMarcas .contenedorMarcas a {
+          width: 100px;
+          height: 100px; }
+      .sectionMarcas .divMarcas .circulo {
+        display: none; } }

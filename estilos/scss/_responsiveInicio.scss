@@ -230,5 +230,109 @@
 }
 //celular
 @media all and(max-width: 599px){
-   
+    .presentacion {
+        width: 95%;
+    
+        .presentacionGrid {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(5, 180px);
+            grid-template-areas: "cocina" 
+                                 "regaleria"
+                                 "mate"
+                                 "baño" 
+                                 "juguete";
+    
+            .categoriasGrid{
+                padding: 15px;
+                .categoriaGridInfo {
+                    a{
+                        font-size: 18px;
+                        left: 15px;
+                        bottom: 15px;
+                    }
+                    .contenedorSpan {        
+                        .spanNum {
+                            font-size: 22px;
+                            display: block;
+                        }
+            
+                        .spanProduct {
+                            font-size: 18px;
+                            display: block;
+                        }
+                    }
+                }
+            }
+    
+            .g1 {
+                img {
+                    width: 200px;
+                    top: 45px;
+                }
+            }
+    
+            .g2 { 
+                img {
+                    width: 200px;
+                    top: -30px;
+                    right: -20px;
+                }
+    
+            }
+    
+            .g3 {
+                img {
+                    width: 160px;
+                    top: 20px;
+                }
+            }
+    
+            .g4 {
+                img {
+                    top: 65px;
+                }
+            }
+    
+            .g5 {
+                img {
+                    width: 250px;
+                    top: 20px;
+                    right: -25px;
+                }
+            }
+        }
+    
+    }
+    
+    .sectionProductos{
+        width: 95%;
+    }
+        
+    .sectionMarcas {
+        width: 95%;
+    
+        .divMarcas {
+            flex-wrap: wrap;
+    
+            h3 {
+                padding-top: 25px;
+            }
+    
+            .contenedorMarcas {
+                width: 80%;
+                margin: auto;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                a {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+
+            .circulo{
+                display: none;
+            }
+        }
+    }
 }
