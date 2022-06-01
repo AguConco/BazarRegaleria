@@ -953,8 +953,8 @@ footer {
       header .headerCenter .headerNav {
         background: #fff;
         position: absolute;
-        top: 70px;
-        left: 200%;
+        top: -200px;
+        left: 0;
         width: 100%;
         flex-wrap: wrap;
         height: auto;
@@ -978,8 +978,8 @@ footer {
                 width: 100%; }
           header .headerCenter .headerNav nav .opcionesNav {
             position: absolute;
-            top: -50px;
-            right: calc(200% + 44px);
+            top: 220px;
+            right: 44px;
             display: flex;
             width: 70px; }
             header .headerCenter .headerNav nav .opcionesNav #lupa {
