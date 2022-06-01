@@ -1215,7 +1215,7 @@ footer {
       .sectionMarcas .divMarcas h3 {
         padding-top: 25px; }
       .sectionMarcas .divMarcas .contenedorMarcas {
-        width: 80%;
+        width: 100%;
         margin: auto;
         flex-wrap: wrap;
         justify-content: center; }
