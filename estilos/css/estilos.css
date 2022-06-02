@@ -1353,11 +1353,10 @@ footer {
               .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .productoCarritoNombre a {
                 font-size: 14px; }
             .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .cantidadProductoCarrito {
-              width: 100%;
+              width: 100px;
               height: 35px;
-              display: flex;
-              justify-content: end;
-              padding-right: 10px; }
+              position: relative;
+              left: calc(100% - 100px); }
               .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .cantidadProductoCarrito input {
                 width: 40px;
                 font-size: 15px; }

@@ -223,12 +223,11 @@
                         }
         
                         .cantidadProductoCarrito{
-                            width: 100%;
+                            width: 100px;
                             height: 35px;
-                            display: flex;
-                            justify-content: flex-end;
-                            padding-right: 10px;
-
+                            position: relative;
+                            left: calc(100% - 100px);
+                            
                             input{
                                 width: 40px;
                                 font-size: 15px;
