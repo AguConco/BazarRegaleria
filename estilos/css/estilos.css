@@ -509,7 +509,7 @@ footer {
   width: 1300px;
   margin: 60px auto; }
   .sectionCarrito .contenedorPedidoCarrito {
-    display: none;
+    display: flex;
     justify-content: space-between; }
     .sectionCarrito .contenedorPedidoCarrito .carrito {
       width: 1000px;
@@ -588,11 +588,14 @@ footer {
             width: 130px; }
             .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .contenedorCarrito .imgCarrito {
               width: 80px;
-              height: 80px; }
+              height: 80px;
+              display: flex;
+              align-items: center;
+              justify-content: center; }
               .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .contenedorCarrito .imgCarrito img {
                 object-fit: contain;
-                max-width: 80px;
-                max-height: 80px; }
+                max-width: 100%;
+                max-height: 100%; }
           .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .productoCarritoNombre {
             width: 500px; }
             .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .productoCarritoNombre h2 {
@@ -643,7 +646,9 @@ footer {
             width: 100px; }
             .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .productoCarritoPrecio span {
               font-size: 20px;
-              font-weight: 600; }
+              font-weight: 600;
+              display: block;
+              text-align: end; }
     .sectionCarrito .contenedorPedidoCarrito .detallePedido {
       background: #fff;
       border-radius: 5px;
@@ -1224,3 +1229,155 @@ footer {
           height: 100px; }
       .sectionMarcas .divMarcas .circulo {
         display: none; } }
+
+@media all and (max-width: 1350px) {
+  .sectionCarrito {
+    width: 960px; }
+    .sectionCarrito .contenedorPedidoCarrito .carrito {
+      width: 680px; }
+      .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .contenedorCarrito .imgCarrito {
+        width: 75px;
+        height: 75px; }
+      .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .productoCarritoNombre {
+        width: 350px;
+        margin-left: 15px; }
+      .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .productoCarritoPrecio {
+        width: 80px; }
+    .sectionCarrito .contenedorPedidoCarrito .detallePedido {
+      width: 270px; }
+      .sectionCarrito .contenedorPedidoCarrito .detallePedido h5 .avisoPecioEnvio span {
+        top: -60px;
+        right: -60%; }
+  .sectionArrepentimiento {
+    width: 960px; } }
+
+@media all and (min-width: 599px) and (max-width: 1000px) {
+  .sectionCarrito {
+    width: 580px; }
+    .sectionCarrito .contenedorPedidoCarrito {
+      flex-wrap: wrap; }
+      .sectionCarrito .contenedorPedidoCarrito .carrito {
+        width: 100%; }
+        .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .contenedorCarrito {
+          width: 110px; }
+          .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .contenedorCarrito .imgCarrito {
+            width: 60px;
+            height: 60px; }
+        .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .productoCarritoNombre {
+          width: 250px;
+          margin-left: 15px; }
+          .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .productoCarritoNombre h2 {
+            min-width: 240px;
+            max-width: 230px;
+            font-size: 17px; }
+          .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .productoCarritoNombre a {
+            font-size: 14px; }
+        .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .cantidadProductoCarrito {
+          width: 100px;
+          height: 35px; }
+          .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .cantidadProductoCarrito input {
+            width: 40px; }
+          .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .cantidadProductoCarrito button {
+            font-size: 18px; }
+        .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .productoCarritoPrecio {
+          width: 70px; }
+          .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .productoCarritoPrecio span {
+            font-size: 17px; }
+      .sectionCarrito .contenedorPedidoCarrito .detallePedido {
+        position: relative;
+        width: 100%;
+        margin-top: 5px;
+        padding: 15px;
+        height: auto; }
+        .sectionCarrito .contenedorPedidoCarrito .detallePedido h4 {
+          font-size: 20px;
+          text-align: center;
+          margin-top: 0; }
+        .sectionCarrito .contenedorPedidoCarrito .detallePedido .contenedorImgDetalle {
+          display: flex;
+          justify-content: center; }
+          .sectionCarrito .contenedorPedidoCarrito .detallePedido .contenedorImgDetalle div {
+            z-index: 2; }
+          .sectionCarrito .contenedorPedidoCarrito .detallePedido .contenedorImgDetalle div:nth-child(1) {
+            z-index: 1; }
+          .sectionCarrito .contenedorPedidoCarrito .detallePedido .contenedorImgDetalle div:nth-child(3) {
+            z-index: 1; }
+        .sectionCarrito .contenedorPedidoCarrito .detallePedido h5 .avisoPecioEnvio span {
+          top: -40px;
+          right: -95%; }
+        .sectionCarrito .contenedorPedidoCarrito .detallePedido .btnOpcionesPedido {
+          display: flex;
+          position: relative;
+          width: 100%;
+          justify-content: center; }
+          .sectionCarrito .contenedorPedidoCarrito .detallePedido .btnOpcionesPedido button {
+            font-size: 18px;
+            width: 200px;
+            margin: 5px; }
+  .sectionArrepentimiento {
+    width: 580px; } }
+
+@media all and (max-width: 599px) {
+  .sectionCarrito {
+    width: 95%; }
+    .sectionCarrito .contenedorPedidoCarrito {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      .sectionCarrito .contenedorPedidoCarrito .carrito {
+        width: 100%; }
+        .sectionCarrito .contenedorPedidoCarrito .carrito .opcionesEliminar {
+          padding: 10px; }
+        .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito {
+          padding: 10px; }
+          .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito {
+            display: block;
+            height: auto;
+            margin-bottom: 5px;
+            position: relative; }
+            .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .contenedorCarrito {
+              vertical-align: top;
+              display: inline-flex;
+              width: 90px; }
+              .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .contenedorCarrito .imgCarrito {
+                width: 60px;
+                height: 60px; }
+            .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .productoCarritoNombre {
+              display: inline-block;
+              width: calc(100% - 40%);
+              margin: 5px 0 5px 0; }
+              .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .productoCarritoNombre h2 {
+                min-width: 180px;
+                max-width: 200px;
+                font-size: 17px; }
+              .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .productoCarritoNombre a {
+                font-size: 14px; }
+            .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .cantidadProductoCarrito {
+              width: 100%;
+              height: 35px;
+              display: flex;
+              justify-content: end;
+              padding-right: 10px; }
+              .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .cantidadProductoCarrito input {
+                width: 40px;
+                font-size: 15px; }
+              .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .cantidadProductoCarrito button {
+                font-size: 18px; }
+                .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .cantidadProductoCarrito button:nth-child(1) {
+                  font-size: 20px; }
+            .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .productoCarritoPrecio {
+              width: auto;
+              position: absolute;
+              bottom: 10px;
+              left: 95px; }
+              .sectionCarrito .contenedorPedidoCarrito .carrito .contenedorProductosCarrito .productoCarrito .productoCarritoPrecio span {
+                font-size: 18px; }
+      .sectionCarrito .contenedorPedidoCarrito .detallePedido {
+        margin-top: 10px;
+        width: 100%; }
+    .sectionCarrito .carritoVacio {
+      width: 100%; }
+  .sectionArrepentimiento {
+    width: 95%; }
+    .sectionArrepentimiento p {
+      text-align: center; } }

@@ -1,0 +1,283 @@
+
+@media all and(max-width: 1350px) {
+    .sectionCarrito {
+        width: 960px;
+    
+        .contenedorPedidoCarrito{    
+            .carrito{
+                width: 680px;
+    
+                .contenedorProductosCarrito{    
+                    .productoCarrito{
+                        .contenedorCarrito{
+                            .imgCarrito{
+                                width: 75px;
+                                height: 75px;
+                            }
+                        }
+        
+                        .productoCarritoNombre{
+                            width: 350px;
+                            margin-left: 15px;
+                        }
+    
+                        .productoCarritoPrecio{
+                            width: 80px;
+                        }
+                    }
+                }
+            }
+        
+            .detallePedido {
+                width: 270px;
+
+                h5 {
+                    .avisoPecioEnvio {   
+                        span {
+                            top: -60px;
+                            right: -60%;
+                        }
+        
+
+                    }
+                }
+            }
+        
+        }
+    
+    }
+    
+    .sectionArrepentimiento{
+        width: 960px;
+    }
+}
+   
+@media all and(min-width: 599px) and (max-width: 1000px) {
+    .sectionCarrito {
+        width: 580px;
+    
+        .contenedorPedidoCarrito{
+            flex-wrap: wrap;
+
+            .carrito{
+                width: 100%;
+                .contenedorProductosCarrito{  
+                    .productoCarrito{
+                        .contenedorCarrito{
+                            width: 110px;
+                            .imgCarrito{
+                                width: 60px;
+                                height: 60px;
+                            }
+                        }
+        
+                        .productoCarritoNombre{
+                            width: 250px;
+                            margin-left: 15px;
+                            h2{
+                                min-width: 240px;
+                                max-width: 230px;
+                                font-size: 17px;
+                            } 
+    
+                            a{
+                                font-size: 14px;
+                            }
+                        }
+                        .cantidadProductoCarrito{
+                            width: 100px;
+                            height: 35px;
+
+                            input{
+                                width: 40px;
+                            }
+    
+                            button{
+                                font-size: 18px;
+                            }
+    
+    
+                        }
+
+                        .productoCarritoPrecio{
+                            width: 70px;
+                            span{
+                                font-size: 17px;
+                            }
+                        }
+                    }
+                }
+            }
+        
+            .detallePedido {
+                position: relative;
+                width: 100%;
+                margin-top: 5px;
+                padding: 15px;
+                height: auto;
+        
+                h4 {
+                    font-size: 20px;
+                    text-align: center;
+                    margin-top: 0;
+                }
+        
+                .contenedorImgDetalle {
+                    display: flex;
+                    justify-content: center;
+        
+                    div {
+                        z-index: 2;
+                    }
+                    div:nth-child(1) {
+                        z-index: 1;
+                    }
+                    div:nth-child(3) {
+                        z-index: 1;
+                    }
+                }
+        
+                h5 {
+                    .avisoPecioEnvio {
+                        span {
+                            top: -40px;
+                            right: -95%;
+                        }
+                    }
+                }
+        
+                .btnOpcionesPedido {
+                    display: flex;
+                    position: relative;
+                    width: 100%;
+                    justify-content: center;
+        
+                    button {
+                        font-size: 18px;
+                        width: 200px;
+                        margin: 5px;
+                    }
+                }
+        
+        
+            }
+        
+        }
+    
+    }
+    
+    .sectionArrepentimiento{
+        width: 580px;
+    }
+}
+
+@media all and(max-width: 599px){
+
+    .sectionCarrito {
+        width: 95%;
+    
+        .contenedorPedidoCarrito{
+            display:flex; // display:none;
+            justify-content: space-between;
+            flex-wrap: wrap;
+    
+            .carrito{
+                width: 100%;
+
+                .opcionesEliminar{
+                    padding: 10px;
+                }
+                .contenedorProductosCarrito{   
+                    padding: 10px;
+
+                    .productoCarrito{
+                        display: block;
+                        height: auto;
+                        margin-bottom: 5px;
+                        position: relative;
+                        
+                        .contenedorCarrito{
+                            vertical-align: top;
+                            display: inline-flex;
+                            width: 90px;    
+                            .imgCarrito{
+                                width: 60px;
+                                height: 60px;
+                            }
+                        }
+        
+                        .productoCarritoNombre{
+                            display: inline-block;
+                            width: calc(100% - 40%);
+                            margin: 5px 0 5px 0;
+                            h2{
+                                min-width: 180px;
+                                max-width: 200px;
+                                font-size: 17px;
+                            } 
+    
+                            a{
+                                font-size: 14px;
+
+                            }
+                        }
+        
+                        .cantidadProductoCarrito{
+                            width: 100%;
+                            height: 35px;
+                            display: flex;
+                            justify-content: end;
+                            padding-right: 10px;
+
+                            input{
+                                width: 40px;
+                                font-size: 15px;
+                            }
+    
+                            button{
+                                font-size: 18px;
+
+                                &:nth-child(1){
+                                    font-size: 20px;
+                                }
+                            }
+    
+                        }
+    
+                        .productoCarritoPrecio{
+                            width: auto;
+                            position: absolute;
+                            bottom: 10px;
+                            left: 95px;
+                            span{
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        
+            .detallePedido {
+                margin-top: 10px;
+                width: 100%;        
+            }
+        
+        }
+    
+        .carritoVacio{
+            // display: none;
+            width: 100%;
+
+        }
+    
+    }
+    
+    .sectionArrepentimiento{
+        width: 95%;
+        p{
+            text-align: center
+        }
+    
+    }
+}
+   
